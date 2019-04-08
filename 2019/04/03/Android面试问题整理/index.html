@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Android面试问题整理 | 
+        
+        Love Way
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Love Way">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/04/03/Android面试问题整理/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Love Way">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/04/03/Android面试问题整理/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Android面试问题整理 | Love Way">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Wed Apr 03 2019 22:37:47 GMT+0800">
+        <meta property="article:modified_time" content="Thu Apr 04 2019 11:51:27 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/04/03/Android面试问题整理/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/04/03/Android面试问题整理/index.html",
+    "headline": "Android面试问题整理",
+    "datePublished": "Wed Apr 03 2019 22:37:47 GMT+0800",
+    "dateModified": "Thu Apr 04 2019 11:51:27 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Aderan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Love Way",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Android"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动方式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">启动方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四大组建生命周期"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">四大组建生命周期</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Conetext"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Conetext</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Broadcast"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Broadcast</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ContentProvider"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">ContentProvider</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android消息机制原理"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Android消息机制原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义UI组件"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">自定义UI组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Android事件分发机制"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">Android事件分发机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Android测量绘制机制"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">Android测量绘制机制</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程与线程"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">进程与线程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#性能优化及异常处理"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">性能优化及异常处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ANR"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">ANR</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OOM，内存泄漏"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">OOM，内存泄漏</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#App启动崩溃异常捕捉"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">App启动崩溃异常捕捉</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么保证应用启动不卡顿，统计启动时长-标准"><span class="post-toc-number">1.9.4.</span> <span class="post-toc-text">怎么保证应用启动不卡顿，统计启动时长,标准</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍下SurfaceView"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">介绍下SurfaceView</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SP是进程同步的吗-有什么方法做到同步"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">SP是进程同步的吗?有什么方法做到同步</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述清点击-Android-Studio-的-build-按钮后发生了什么"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">描述清点击 Android Studio 的 build 按钮后发生了什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#大体说清一个应用程序安装到手机上时发生了什么；"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">大体说清一个应用程序安装到手机上时发生了什么；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#App-是如何沙箱化，为什么要这么做；"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">App 是如何沙箱化，为什么要这么做；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android中数据存储方式"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">Android中数据存储方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android中进程内存的分配，能不能自己分配定额内存"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">Android中进程内存的分配，能不能自己分配定额内存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#热修复-插件化"><span class="post-toc-number">1.17.</span> <span class="post-toc-text">热修复,插件化</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Android-Framework"><span class="post-toc-number">2.</span> <span class="post-toc-text">Android Framework</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Binder机制介绍"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Binder机制介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AndroidManifest的作用与理解"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">AndroidManifest的作用与理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#App启动流程，从点击桌面开始"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">App启动流程，从点击桌面开始</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#画出Android的大体架构图"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">画出Android的大体架构图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进程和Application的生命周期；"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">进程和Application的生命周期；</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UI优化"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">UI优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AsyncTask"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">AsyncTask</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#架构模式"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">架构模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">进程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JNI"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">JNI</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java"><span class="post-toc-number">3.</span> <span class="post-toc-text">Java</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JVM"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JVM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JVM内存模型"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">JVM内存模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#垃圾回收机制与调用System-gc-区别"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">垃圾回收机制与调用System.gc()区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#谈谈ClassLoader"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">谈谈ClassLoader</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GC回收策略"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">GC回收策略</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#类加载机制"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">类加载机制</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#容器"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">容器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LruCache原理"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">LruCache原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HashMap源码-SpareArray原理"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">HashMap源码,SpareArray原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#容器代码"><span class="post-toc-number">3.2.3.</span> <span class="post-toc-text">容器代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多线程线程操作List"><span class="post-toc-number">3.2.4.</span> <span class="post-toc-text">多线程线程操作List</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程及并发"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">线程及并发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线程基础"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">线程基础</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Java线程池-ThreadPoolExecutor"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">Java线程池,ThreadPoolExecutor</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#并发"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">并发</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Java中对象的生命周期"><span class="post-toc-number">3.3.4.</span> <span class="post-toc-text">Java中对象的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#保证线程安全"><span class="post-toc-number">3.3.5.</span> <span class="post-toc-text">保证线程安全</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ThreadLocal-原理"><span class="post-toc-number">3.3.6.</span> <span class="post-toc-text">ThreadLocal 原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#死锁"><span class="post-toc-number">3.3.7.</span> <span class="post-toc-text">死锁</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Thread"><span class="post-toc-number">3.3.8.</span> <span class="post-toc-text">Thread</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#String"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">String</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#NIO"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">NIO</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Java注解"><span class="post-toc-number">3.4.2.</span> <span class="post-toc-text">Java注解</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源码"><span class="post-toc-number">4.</span> <span class="post-toc-text">源码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图片加载原理"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">图片加载原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Okhttp"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Okhttp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#EventBus实现原理"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">EventBus实现原理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">5.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#断点续传的实现"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">断点续传的实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块化实现（好处，原因）"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">模块化实现（好处，原因）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RxJava的作用，优缺点"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">RxJava的作用，优缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#登录支付相关加密算法"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">登录支付相关加密算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何保持应用的稳定性"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">如何保持应用的稳定性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#算法及数据结构"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">算法及数据结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网络"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">网络</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Https请求慢的解决办法"><span class="post-toc-number">5.7.1.</span> <span class="post-toc-text">Https请求慢的解决办法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#TCP-UDP的区别"><span class="post-toc-number">5.7.2.</span> <span class="post-toc-text">TCP/UDP的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计模式"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">设计模式</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Android面试问题整理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Aderan</strong>
+        <span>4月 03, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android面试问题整理&url=http://yoursite.com/2019/04/03/Android面试问题整理/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android面试问题整理&url=http://yoursite.com/2019/04/03/Android面试问题整理/index.html&via=Aderan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/04/03/Android面试问题整理/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2019/04/03/Android面试问题整理/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h3><p>Standard<br>SingleTop 栈顶复用模式 onNewIntent<br>SingleTask 栈内复用模式单一Task复用，清除栈内所有其他Activity<br>SingleInstance 单实例模式</p>
+<h3 id="四大组建生命周期"><a href="#四大组建生命周期" class="headerlink" title="四大组建生命周期"></a>四大组建生命周期</h3><p>Service生命周期(onBind,onRebind,onCreate,onDestroy)<br>Activity生命周期(横竖屏切换, 前后台切换, 弹出Dialog, 有Dialog的时候按Home键)<br>onSaveInstanceState执行时机<br>    很可能导致销毁的情况（按下HOME键， 长按HOME任务列表，按下电源按键，启动Activity，横竖屏切换）<br>    onSaveInstanceState方法和onRestoreInstanceState方法“不一定”是成对的被调用的<br>Fragment各种情况下的生命周期<br>Activity与Fragment之间生命周期比较<br>简述Activity启动全部过程？<br>怎么启动Service，Service和Activity怎么进行数据交互<br>Activity栈<br>如何实现Fragment的滑动<br>Fragment之间传递数据的方式？<br>下拉状态栏是不是影响Activity的生命周期，如果在OnStop的时候做了网络请求，OnResume的时候怎么恢复<br>Service的开启方式<br>Activity与Service通信的方式<br>Activity之间的通信方式</p>
+<h3 id="Conetext"><a href="#Conetext" class="headerlink" title="Conetext"></a>Conetext</h3><p>AlertDialog,PopupWindow,Activity区别<br>Application中的Context和Activity中的Context的区别<br>这两者的生命周期是不同的，它们各自的使用场景不同;<br>显示Dialog (WindowManagerImpl实现不同，分支走的不同，Token未赋值)，启动Activity（FLAG_ACTIVITY_NEW_TASK），UI布局</p>
+<h3 id="Broadcast"><a href="#Broadcast" class="headerlink" title="Broadcast"></a>Broadcast</h3><p>Broadcast处理耗时操作<br>    IntentService，ThreadPool<br>BroadcastReceiver，LocalBroadcastReceiver 区别<br>降低Broadcast的响应范围，效率更高<br>动态注册和静态注册区别，有序广播和标准广播<br>广播的使用方式，场景</p>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><p>Android系统为什么会设计ContentProvider<br>    封装。对数据进行封装，提供统一的接口，使用者完全不必关心这些数据是在DB，XML、Preferences或者网络请求来的。当项目需求要改变数据来源时，使用我们的地方完全不需要修改。<br>    提供一种跨进程数据共享的方式。<br>    （对于概念与组件，需要了解其设计意图、使用场景、设计实现及主要接口及能力）<br>FileProvier的实现原理</p>
+<h3 id="Android消息机制原理"><a href="#Android消息机制原理" class="headerlink" title="Android消息机制原理"></a>Android消息机制原理</h3><p>Handler Looper MessageQueue，Native Looper机制<br>Handler实现机制（很多细节需要关注：如线程如何建立和退出消息循环等等）<br>关于Handler，在任何地方new Handler都是什么线程下</p>
+<h3 id="自定义UI组件"><a href="#自定义UI组件" class="headerlink" title="自定义UI组件"></a>自定义UI组件</h3><h4 id="Android事件分发机制"><a href="#Android事件分发机制" class="headerlink" title="Android事件分发机制"></a>Android事件分发机制</h4><p>dispatchTouchEvent,onInterceptTouchEvent,onTouchEvent<br>IMS,WMS,ViewRootImpl走相应的事件处理<br>点击事件被拦截，但是相传到下面的view，如何操作？</p>
+<h4 id="Android测量绘制机制"><a href="#Android测量绘制机制" class="headerlink" title="Android测量绘制机制"></a>Android测量绘制机制</h4><p>封装View的时候怎么知道View的大小<br>动态布局</p>
+<h3 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h3><p>进程共享和线程安全问题<br>Android IPC 跨进程通信时如何工作的<br>    Bundle，AIDL，Message，Socket，ContentProvider<br>为什么不能在子线程更新UI<br>    Code: ViewRootImpl checkThread判断线程<br>    复杂度，效率；GUI框架程序的复杂度，CPU复杂的处理，支持多线程操作，并不能提升多少效率，反而会使整个系统变得不好实现</p>
+<h3 id="性能优化及异常处理"><a href="#性能优化及异常处理" class="headerlink" title="性能优化及异常处理"></a>性能优化及异常处理</h3><p>Android相关优化（如内存优化、网络优化、布局优化、电量优化、业务优化）<br>性能优化如何分析systrace？</p>
+<h4 id="ANR"><a href="#ANR" class="headerlink" title="ANR"></a>ANR</h4><p>ANR怎么分析解决<br>    adb pull data/anr/traces.txt ./mytraces.txt<br>ANR如何产生？ANR的原因<br>    主线程占用CPU 5s，广播占用10s，在主线程中执行I/0，网络，数据库操作，或则特别复杂的计算</p>
+<h4 id="OOM，内存泄漏"><a href="#OOM，内存泄漏" class="headerlink" title="OOM，内存泄漏"></a>OOM，内存泄漏</h4><p>内存泄漏的可能原因？<br>用IDE如何分析内存泄漏？<br>内存泄露如何产生？<br>    静态变量引起<br>    匿名内部类（Block住）将非静态内部类修改为静态内部类，WeakRef<br>    资源未关闭引起的内存泄露情况<br>OOM的可能原因？<br>    HeapSize OOM(堆空间内存溢出)<br>    加载大图<br>    文件描述符(fd)数目超限<br>    线程数超限<br>    短时间内大量请求导致socket</p>
+<h4 id="App启动崩溃异常捕捉"><a href="#App启动崩溃异常捕捉" class="headerlink" title="App启动崩溃异常捕捉"></a>App启动崩溃异常捕捉</h4><p>Java层：Thread.UncaughtExceptionHandler<br>Native层：sigaction</p>
+<h4 id="怎么保证应用启动不卡顿，统计启动时长-标准"><a href="#怎么保证应用启动不卡顿，统计启动时长-标准" class="headerlink" title="怎么保证应用启动不卡顿，统计启动时长,标准"></a>怎么保证应用启动不卡顿，统计启动时长,标准</h4><p>adb shell am start -w packagename/activity<br>使用日志Application.attachBaseContext，onWindowFocusChanged<br>TraceView</p>
+<h3 id="介绍下SurfaceView"><a href="#介绍下SurfaceView" class="headerlink" title="介绍下SurfaceView"></a>介绍下SurfaceView</h3><p>可在Worker线程更新，双缓存机制；独立的Surface，再View树内，不支持View的Tween操作</p>
+<h3 id="SP是进程同步的吗-有什么方法做到同步"><a href="#SP是进程同步的吗-有什么方法做到同步" class="headerlink" title="SP是进程同步的吗?有什么方法做到同步"></a>SP是进程同步的吗?有什么方法做到同步</h3><p>不支持多进程，因为它是基于单个文件，且app对SP做了缓存，不好同步；<br>ContentProvider，进程统一操作法Service</p>
+<h3 id="描述清点击-Android-Studio-的-build-按钮后发生了什么"><a href="#描述清点击-Android-Studio-的-build-按钮后发生了什么" class="headerlink" title="描述清点击 Android Studio 的 build 按钮后发生了什么"></a>描述清点击 Android Studio 的 build 按钮后发生了什么</h3><p>gradle assemble；gradle初始化，config，excuter；下载本缓存三方依赖库，编译依赖module，res，aidl，打包签名，zipalign</p>
+<h3 id="大体说清一个应用程序安装到手机上时发生了什么；"><a href="#大体说清一个应用程序安装到手机上时发生了什么；" class="headerlink" title="大体说清一个应用程序安装到手机上时发生了什么；"></a>大体说清一个应用程序安装到手机上时发生了什么；</h3><p>copy /data/app/，解压lib，创建存储文件，解析Manifest文件，创建快捷方式。</p>
+<h3 id="App-是如何沙箱化，为什么要这么做；"><a href="#App-是如何沙箱化，为什么要这么做；" class="headerlink" title="App 是如何沙箱化，为什么要这么做；"></a>App 是如何沙箱化，为什么要这么做；</h3><p>权限隔离，内部数据隔离（data/data）私有存储uid，为了安全<br>每个应用分配一个UID，签名相同可配置共享UID<br>权限管理系统（底层的权限是如何进行 grant 的）</p>
+<h3 id="Android中数据存储方式"><a href="#Android中数据存储方式" class="headerlink" title="Android中数据存储方式"></a>Android中数据存储方式</h3><p>Sqlite，SharePreference，File</p>
+<h3 id="Android中进程内存的分配，能不能自己分配定额内存"><a href="#Android中进程内存的分配，能不能自己分配定额内存" class="headerlink" title="Android中进程内存的分配，能不能自己分配定额内存"></a>Android中进程内存的分配，能不能自己分配定额内存</h3><h3 id="热修复-插件化"><a href="#热修复-插件化" class="headerlink" title="热修复,插件化"></a>热修复,插件化</h3><p>插件化：四大组件及生命周期，资源加载问题<br>热修复：类加载机制：DexList的最前端；CLASS_ISPREVERIFIED问题，javaassist和asm修改；Tinker差分合并解决</p>
+<h2 id="Android-Framework"><a href="#Android-Framework" class="headerlink" title="Android Framework"></a>Android Framework</h2><h3 id="Binder机制介绍"><a href="#Binder机制介绍" class="headerlink" title="Binder机制介绍"></a>Binder机制介绍</h3><p>binder驱动，servicemanger， systemserver， AMS，WMS，surfaceflinger，AIDL<br>Bundle 机制</p>
+<h3 id="AndroidManifest的作用与理解"><a href="#AndroidManifest的作用与理解" class="headerlink" title="AndroidManifest的作用与理解"></a>AndroidManifest的作用与理解</h3><h3 id="App启动流程，从点击桌面开始"><a href="#App启动流程，从点击桌面开始" class="headerlink" title="App启动流程，从点击桌面开始"></a>App启动流程，从点击桌面开始</h3><p>AMS，CreateApp，AMS，ActivityThread等</p>
+<h3 id="画出Android的大体架构图"><a href="#画出Android的大体架构图" class="headerlink" title="画出Android的大体架构图"></a>画出Android的大体架构图</h3><p>Linux HAL Libc（Webkit，Sqlite），JVM，Framework，Application</p>
+<h4 id="进程和Application的生命周期；"><a href="#进程和Application的生命周期；" class="headerlink" title="进程和Application的生命周期；"></a>进程和Application的生命周期；</h4><p>系统启动流程 Zygote进程 –&gt; SystemServer进程 –&gt; 各种系统服务 –&gt; 应用进程</p>
+<h3 id="UI优化"><a href="#UI优化" class="headerlink" title="UI优化"></a>UI优化</h3><p>RecycleView的使用，原理，RecycleView优化<br>RecyclerView ListView的区别,性能<br>ListView图片加载错乱的原理和解决方案<br>用View复用机制和异步操作，（tag，url绑定加载前确认）</p>
+<h3 id="AsyncTask"><a href="#AsyncTask" class="headerlink" title="AsyncTask"></a>AsyncTask</h3><p>多线程（关于AsyncTask缺陷引发的思考）<br>AsyncTask机制<br>如何取消AsyncTask</p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>数据库数据迁移问题<br>    根据数据库版本逐代升级，设计数据库考虑可扩展</p>
+<h3 id="架构模式"><a href="#架构模式" class="headerlink" title="架构模式"></a>架构模式</h3><p>模式MVP，MVC，MVVM<br>项目组件化的理解<br>    组件化PaySDK，MapSDK，UI组件等。模块化将业务分离，通过相应路由协议相互调用</p>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程保活<br>App中唤醒其他进程的实现方式<br>简述IPC？<br>Android进程分类<br>进程间通信的机制<br>序列化<br>Android为什么引入Parcelable<br>序列化的作用，以及 Android 两种序列化的区别。<br>有没有尝试简化Parcelable的使用<br>多进程场景遇见过么？<br>   IM进程，推送进程，图片处理是独立的进程，图片合成进程</p>
+<h3 id="JNI"><a href="#JNI" class="headerlink" title="JNI"></a>JNI</h3><p>是否熟悉Android jni开发，jni如何调用java层代码</p>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><h4 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h4><p>Java线程，Java线程工作内存，Save/Load，JVM主内存<br>软引用、弱引用区别<br>垃圾回收<br>JVM内存模型，内存区域<br>Java中同步使用的关键字，死锁<br>JVM内存模型<br>垃圾回收机制与调用System.gc()区别</p>
+<h4 id="垃圾回收机制与调用System-gc-区别"><a href="#垃圾回收机制与调用System-gc-区别" class="headerlink" title="垃圾回收机制与调用System.gc()区别"></a>垃圾回收机制与调用System.gc()区别</h4><p>JVM 内存区域 开线程影响哪块内存<br>垃圾收集机制 对象创建，新生代与老年代<br>    Eden，Survivor * 2，老年代，永久代<br>Java四中引用<br>    强引用，软引用，弱引用，虚引用<br>强引用置为null，会不会被回收？<br>    需要等到GC时候被回收，新生代和老年代的GC可能是分开GC的，对大对象可能放在老年代，直接置null可能被更快回回收。<br>如何保证多线程读写文件的安全？<br>Java中内存区域与垃圾回收机制<br>垃圾收集器</p>
+<h4 id="谈谈ClassLoader"><a href="#谈谈ClassLoader" class="headerlink" title="谈谈ClassLoader"></a>谈谈ClassLoader</h4><h4 id="GC回收策略"><a href="#GC回收策略" class="headerlink" title="GC回收策略"></a>GC回收策略</h4><h4 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h4><p>类加载机制<br>双亲委派模型<br>亲祖委派模型，保证类的唯一性（加载器相同，类全名相同）</p>
+<h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><h4 id="LruCache原理"><a href="#LruCache原理" class="headerlink" title="LruCache原理"></a>LruCache原理</h4><p>Size，Hit/Miss，LinkedHashMap，LinkedHashMapEntry recordAccess 插入尾部</p>
+<h4 id="HashMap源码-SpareArray原理"><a href="#HashMap源码-SpareArray原理" class="headerlink" title="HashMap源码,SpareArray原理"></a>HashMap源码,SpareArray原理</h4><p>// SpareArray 二分查找<br>private int[] mKeys;<br>private Object[] mValues;<br>private int mSize;</p>
+<h4 id="容器代码"><a href="#容器代码" class="headerlink" title="容器代码"></a>容器代码</h4><p>HashMap实现原理，ConcurrentHashMap 的实现原理<br>Hash槽，Hash桶，死链和对象丢失<br>ConcurrentHashMap 每次加锁的开销，1.8之前ReetrantLock 分段锁；JDK11：CAS取消分段锁，引入红黑树，更优的集合元素统计<br>集合Set实现Hash怎么防止碰撞<br>ArrayList和LinkedList的区别，以及应用场景<br>集合的接口和具体实现类，介绍<br>TreeMap具体实现(红黑树)<br>List,Set,Map的区别<br>列表顺序结构，Set的散列结构，Map记录键值对；Map entrySet<br>Hashmap如何put数据（从hashmap源码角度讲解）？<br>HashSet与HashMap怎么判断集合元素重复<br>二叉树，给出根节点和目标节点，找出从根节点到目标节点的路径<br>内部类和静态内部类和匿名内部类，以及项目中的应用<br>静态内部类的设计意图。<br>    HashMap Entry,ThreadLocal.ThreadLocalMap,单继承<br>HashMap的实现，与HashSet的区别（HashSet内部使用HashMap实现，只是value值为同一静态对象）<br>Object类的equal和hashcode方法重写，为什么？</p>
+<h4 id="多线程线程操作List"><a href="#多线程线程操作List" class="headerlink" title="多线程线程操作List"></a>多线程线程操作List</h4><p>CopyOnWriteArrayList写时拷贝，适合一写多读情况<br>Collections.synchronizedList()</p>
+<h3 id="线程及并发"><a href="#线程及并发" class="headerlink" title="线程及并发"></a>线程及并发</h3><h4 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h4><p>线程和进程的区别？<br>为什么要有线程，而不是仅仅用进程？<br>线程同步，线程通信的概念</p>
+<h4 id="Java线程池-ThreadPoolExecutor"><a href="#Java线程池-ThreadPoolExecutor" class="headerlink" title="Java线程池,ThreadPoolExecutor"></a>Java线程池,ThreadPoolExecutor</h4><p>corePoolSize 核心线程不会被销毁<br>maximumPoolSize 同时执行的线程数，<br>keepAliveTime后清理，allowCoreThreadTimeOut<br>workQueue，大于core入队列<br>handler，拒绝处理</p>
+<h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>并发集合了解哪些<br>CAS介绍</p>
+<h4 id="Java中对象的生命周期"><a href="#Java中对象的生命周期" class="headerlink" title="Java中对象的生命周期"></a>Java中对象的生命周期</h4><pre><code>NEW,RUNNABLE,RUNNING,BLOCKED(同步阻塞，等待阻塞，主动阻塞),DEAD
+</code></pre><h4 id="保证线程安全"><a href="#保证线程安全" class="headerlink" title="保证线程安全"></a>保证线程安全</h4><p>数据线程内可见，只读对象，线程安全类，同步及锁机制<br>并发包：线程同步类，并发集合，线程管理类，锁相关类</p>
+<h4 id="ThreadLocal-原理"><a href="#ThreadLocal-原理" class="headerlink" title="ThreadLocal 原理"></a>ThreadLocal 原理</h4><p>ThreadLocalMap (getMap(t))， Entry<br>volatile<br>    可见性，Java的内存模型，不同线程间存在各自的工作内存，与JVM主内存数据不同步，强制回写（读写操作不是原子操作）<br>    防止指令优化（重排序）<br>Synchronized与Lock的区别（Synchronized与ReentrantLock）<br>    等待可中断，公平锁（可抢占），同时绑定多个Condition对象；资源竞争不是很激烈时候Synchronized性能高一点<br>ReentrantLock的内部实现<br>Synchronized语法支持，monitorenter，monitorexit（监视锁），Lock AQS 并发库<br>sleep 和 wait的区别<br>sleep不释放锁，wait释放锁；sleep是Thread方法，wait是object方法<br>static synchronized 方法的多线程访问和作用，同一个类里面两个synchronized方法，两个线程同时访问的问题<br>wait/notify</p>
+<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><p>线程死锁的4个条件？<br>互斥条件，占有等待、不可抢占、循环等待</p>
+<h4 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h4><p>开启线程的三种方式,run()和start()方法区别<br>    继承Thread覆盖run方法，使用Runnable使用FutureTask，（run执行内容，start处理线程状态，初始化本地线程）<br>线程如何关闭，以及如何防止线程的内存泄漏<br>如何实现线程同步？</p>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 为什么要设计成不可变的？<br>StringBuffer与StringBuilder的区别？<br>StringBuffer线程安全，StringBuilder非线程安全，性能优化</p>
+<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><h4 id="Java注解"><a href="#Java注解" class="headerlink" title="Java注解"></a>Java注解</h4><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><h3 id="图片加载原理"><a href="#图片加载原理" class="headerlink" title="图片加载原理"></a>图片加载原理</h3><p>Glide，picasso，Fresco；缓存机制<br>Glide 使用什么缓存？<br>    LruCache，LinkedHashMap，accessOrder = true<br>Glide 内存缓存如何控制大小？<br>Bitmap Recycler相关<br>    新版去除bitmap = null，回在GC的时候由JVM释放，当然如果确定不再使用的可以调用recycle释放<br>Bitmap 使用时候注意什么？<br>OOM 是否可以try catch ？<br>    1，这个问题怎么思考，明知道可能OOM，是否考虑有其他的解决方法，很多时候OOM可能由其他区域的内存过度消耗<br>图片加载库相关，bitmap如何处理大图，如一张30M的大图，如何预防OOM<br>    2，根据具体需求，选择使用BitmapRegionDecoder或则使用inSampleSize</p>
+<h3 id="Okhttp"><a href="#Okhttp" class="headerlink" title="Okhttp"></a>Okhttp</h3><p>拦截器（Interceptor），重试，转换，缓存，连接，请求</p>
+<h3 id="EventBus实现原理"><a href="#EventBus实现原理" class="headerlink" title="EventBus实现原理"></a>EventBus实现原理</h3><p>EventBus作用，实现方式，代替EventBus的方式</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="断点续传的实现"><a href="#断点续传的实现" class="headerlink" title="断点续传的实现"></a>断点续传的实现</h3><p>Http：1，服务器支持Range字段；2，客户端再次请求时候符合Range字段规定；3，Md5验证<br>Tcp自定义：支持Range，Md5验证</p>
+<h3 id="模块化实现（好处，原因）"><a href="#模块化实现（好处，原因）" class="headerlink" title="模块化实现（好处，原因）"></a>模块化实现（好处，原因）</h3><p>多团队并行开发，模块间解耦，单模块执行提高效率</p>
+<h3 id="RxJava的作用，优缺点"><a href="#RxJava的作用，优缺点" class="headerlink" title="RxJava的作用，优缺点"></a>RxJava的作用，优缺点</h3><p>RxJava的作用，与平时使用的异步操作来比，优势<br>缺点，新的编程思维，有一定的学习成本；Emit不可变对象，可能会又多份。<br>RxJava Rx = Observables + LINQ + Schedulers。<br>响应式扩展，基于观察者模式扩展，封装了线程、同步、线程安全、并发数据结构和非阻塞IO等细节，<br>RxJava简介及其源码解读？<br>RxJava的功能与原理实现</p>
+<h3 id="登录支付相关加密算法"><a href="#登录支付相关加密算法" class="headerlink" title="登录支付相关加密算法"></a>登录支付相关加密算法</h3><p>对称加密算法：3DES传输数据，AES登录数据加密<br>非对称加密：RSA传输密钥<br>对加密算法（如RSA）等是否有了解<br>计算机密码学及加密算法<br>    加解密，hash及摘要等<br>    DES和RSA两种算法各有优缺点：<br>    DES算法处理速度快，而RSA算法速度慢很多；<br>    DES密钥分配困难，而RSA简单；<br>    DES适合用于加密信息内容比较长的场合，而RSA适合用于信息保密非常重要的场合；<br>    混合密码体制则是综合了前两者的优点而设计，动态生产DES密钥，使用RSA传输DES密钥，使用DES传输数据</p>
+<h3 id="如何保持应用的稳定性"><a href="#如何保持应用的稳定性" class="headerlink" title="如何保持应用的稳定性"></a>如何保持应用的稳定性</h3><p>少出错（静态检测，代码review，单元测试，测试规范，积累工程实践），快速解决（线上监测）</p>
+<h3 id="算法及数据结构"><a href="#算法及数据结构" class="headerlink" title="算法及数据结构"></a>算法及数据结构</h3><p>上一问扩展，海量数据，内存中放不下，怎么求出。<br>堆排序过程，时间复杂度，空间复杂度<br>快速排序的时间复杂度，空间复杂度</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="Https请求慢的解决办法"><a href="#Https请求慢的解决办法" class="headerlink" title="Https请求慢的解决办法"></a>Https请求慢的解决办法</h4><p>DNS，携带数据，直接访问IP<br>Https相关，如何验证证书的合法性CA认证，Https中哪里用了对称加密，哪里用了非对称加密，<br>TCP与UDP区别与应用（三次握手和四次挥手）涉及到部分细节（如client如何确定自己发送的消息被server收到） HTTP相关 提到过Websocket 问了WebSocket相关以及与socket的区别<br>简述Tcp四次挥手?<br>网络请求缓存处理，Okhttp如何处理网络缓存的</p>
+<h4 id="TCP-UDP的区别"><a href="#TCP-UDP的区别" class="headerlink" title="TCP/UDP的区别"></a>TCP/UDP的区别</h4><p>面向连接的，基于字节流的，协议定义拥塞机制；无连接，基于数据包的，无拥塞机制；粘包情况</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>抽象类和接口的区别<br>抽象意义不同，Java本事是单继承的，抽象类可以有非抽象方法，抽象类的方法权限可控制，接口public<br>MVP模式<br>设计模式<br>观察者模式，适配器模式，装饰者模式，外观模式的异同？<br>    Adapter，Decortor，Facade（例如Android中哪里使用了观察者模式，单例模式相关）<br>    观察者数据类同步，抽象意义上单例，Eventbus，图片加载，图片缓存等<br>手写生产者/消费者模式</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/04/07/Android日志系统/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/04/03/文章Pending/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Aderan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        aderan@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;Love Way
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
