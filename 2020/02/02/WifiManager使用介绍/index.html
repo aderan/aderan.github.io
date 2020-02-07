@@ -5,19 +5,20 @@
   
 
   
-  <title>Android日志系统 | Love Way</title>
+  <title>WifiManager使用介绍 | Love Way</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍日志系统是线上问题查询，问题追踪的有效工具。关于日志系统 相关概念日志同步后台线程Thread.setDefaultUncaughtExceptionHandler崩溃时日志记录长连接传输，Http传输 概念及验证">
+  <meta name="description" content="介绍如果想要编写一个完整的功能封装，需要对系统提供的API有一个相对全面的了解，了解通过API能实现怎样的功能。对于Wifi功能来说，简单构想出一下子可能存在的基本功能  查询设备周边wifi相关信息。wifi信息必然存在相关强度，类型等，参考系统wifi配置页 获取当前连接的wifi信息 关闭及连接特定的wifi。不同的wifi项有不同的加密类型链接方式不同。由基本功能可以组装来响应一个特定场景">
+<meta name="keywords" content="功能介绍">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android日志系统">
-<meta property="og:url" content="http://yoursite.com/2019/04/07/Android日志系统/index.html">
+<meta property="og:title" content="WifiManager使用介绍">
+<meta property="og:url" content="http://yoursite.com/2020/02/02/WifiManager使用介绍/index.html">
 <meta property="og:site_name" content="Love Way">
-<meta property="og:description" content="介绍日志系统是线上问题查询，问题追踪的有效工具。关于日志系统 相关概念日志同步后台线程Thread.setDefaultUncaughtExceptionHandler崩溃时日志记录长连接传输，Http传输 概念及验证">
+<meta property="og:description" content="介绍如果想要编写一个完整的功能封装，需要对系统提供的API有一个相对全面的了解，了解通过API能实现怎样的功能。对于Wifi功能来说，简单构想出一下子可能存在的基本功能  查询设备周边wifi相关信息。wifi信息必然存在相关强度，类型等，参考系统wifi配置页 获取当前连接的wifi信息 关闭及连接特定的wifi。不同的wifi项有不同的加密类型链接方式不同。由基本功能可以组装来响应一个特定场景">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-06T16:25:47.162Z">
+<meta property="og:updated_time" content="2020-02-02T07:12:39.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android日志系统">
-<meta name="twitter:description" content="介绍日志系统是线上问题查询，问题追踪的有效工具。关于日志系统 相关概念日志同步后台线程Thread.setDefaultUncaughtExceptionHandler崩溃时日志记录长连接传输，Http传输 概念及验证">
+<meta name="twitter:title" content="WifiManager使用介绍">
+<meta name="twitter:description" content="介绍如果想要编写一个完整的功能封装，需要对系统提供的API有一个相对全面的了解，了解通过API能实现怎样的功能。对于Wifi功能来说，简单构想出一下子可能存在的基本功能  查询设备周边wifi相关信息。wifi信息必然存在相关强度，类型等，参考系统wifi配置页 获取当前连接的wifi信息 关闭及连接特定的wifi。不同的wifi项有不同的加密类型链接方式不同。由基本功能可以组装来响应一个特定场景">
   
     <link rel="alternate" href="/atom.xml" title="Love Way" type="application/atom+xml">
   
@@ -64,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Android日志系统" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="android-WifiManager使用介绍" class="article article-type-android" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/07/Android日志系统/" class="article-date">
-  <time datetime="2019-04-06T16:21:30.000Z" itemprop="datePublished">2019-04-07</time>
+    <a href="/2020/02/02/WifiManager使用介绍/" class="article-date">
+  <time datetime="2020-02-02T06:52:07.000Z" itemprop="datePublished">2020-02-02</time>
 </a>
     
   </div>
@@ -78,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android日志系统
+      WifiManager使用介绍
     </h1>
   
 
@@ -86,34 +87,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>日志系统是线上问题查询，问题追踪的有效工具。关于日志系统</p>
-<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><p>日志同步<br>后台线程<br>Thread.setDefaultUncaughtExceptionHandler<br>崩溃时日志记录<br>长连接传输，Http传输</p>
-<h2 id="概念及验证"><a href="#概念及验证" class="headerlink" title="概念及验证"></a>概念及验证</h2>
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>如果想要编写一个完整的功能封装，需要对系统提供的API有一个相对全面的了解，了解通过API能实现怎样的功能。<br>对于Wifi功能来说，简单构想出一下子可能存在的基本功能</p>
+<ol>
+<li>查询设备周边wifi相关信息。wifi信息必然存在相关强度，类型等，参考系统wifi配置页</li>
+<li>获取当前连接的wifi信息</li>
+<li>关闭及连接特定的wifi。不同的wifi项有不同的加密类型链接方式不同。<br>由基本功能可以组装来响应一个特定场景的问题</li>
+</ol>
+<p>如对于AP配网的一个场景，断开特定wifi，连接AP网络，配网成功后重新连接当前配置的网络</p>
+<p>交互图</p>
+<h3 id="接口封装说明"><a href="#接口封装说明" class="headerlink" title="接口封装说明"></a>接口封装说明</h3><p>封装可借鉴其他同学的方案，现在整理出一个通用的方案，ScanResult等<br>关于是否需要封装的必要呢？是否需要封装独立的数据结构？</p>
+<h3 id="实现AP配网功能"><a href="#实现AP配网功能" class="headerlink" title="实现AP配网功能"></a>实现AP配网功能</h3><p>如何模拟WIFI呢？</p>
+<h3 id="结束说明"><a href="#结束说明" class="headerlink" title="结束说明"></a>结束说明</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/07/Android日志系统/" data-id="ck6bv982700009x4hhubkvqb8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/02/WifiManager使用介绍/" data-id="ck6bv982g00049x4h95r4ps5j" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能介绍/">功能介绍</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/02/02/WifiManager使用介绍/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          WifiManager使用介绍
+          如何解决Switch无法登陆官网及下载问题
         
       </div>
     </a>
   
   
-    <a href="/2019/04/03/Android面试问题整理/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/07/Android日志系统/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Android面试问题整理</div>
+      <div class="article-nav-title">Android日志系统</div>
     </a>
   
 </nav>

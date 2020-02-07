@@ -1,1292 +1,708 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
-    <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-
-
-
-
-
-
-
-
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-        Love Way
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
   
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
 
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Love Way">
-    <meta name="msapplication-starturl" content="http://yoursite.com/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Love Way">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Love Way">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="http://yoursite.com">
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Love Way",
-        "logo": "/img/favicon.png"
-    },
-    "url": "http://yoursite.com",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http://yoursite.com"
-    },
-    "description": ""
-}
-</script>
-
-
-
-
-    
-
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
-
+  
+  <title>Love Way</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Love Way">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Love Way">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Love Way">
+  
+    <link rel="alternate" href="/atom.xml" title="Love Way" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                Hi, nice to meet you
-            
-        
-        </a></p>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Love Way</a>
+      </h1>
+      
     </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/img/avatar.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>Aderan</strong>
-        </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
     </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-如何解决Switch无法登陆官网及下载问题" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/" class="article-date">
+  <time datetime="2020-02-07T07:32:14.000Z" itemprop="datePublished">2020-02-07</time>
+</a>
     
-    <!-- Google -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/">如何解决Switch无法登陆官网及下载问题</a>
+    </h1>
+  
 
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h2><p>当前家庭网络下无法访问NS日服应用商城，百度查询到的通过修改DNS的方式经验证，对本人已经不再适用，需要通过相应的科学上网方式达到NS访问外网的目的。</p>
+<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>需要有一台能直接科学上网的设备，设备支持Http代理转发</p>
+<h2 id="方案确定"><a href="#方案确定" class="headerlink" title="方案确定"></a>方案确定</h2><ol>
+<li>路由器支持S&amp;S，刷入openwrt固件</li>
+<li>电脑转发代理到S&amp;S客户端</li>
+</ol>
+<p>方案一存在一定的操作成本，这里说明方案二的使用<br>在Windows下应该可直接配置。由于使用的Mac OS对直接转发代理至S&amp;S有限制，在Mac转发需要安装特定的软件，此处找到的软件方案是Privoxy。<br>具体配置方案参考<a href="https://sebastianblade.com/share-macos-shadowsocks-proxy-to-other-device/" target="_blank" rel="noopener">共享 macOS 上的 ShadowSocks 代理给其他设备</a></p>
 
-            <input type="hidden" name="sitesearch" value="http://yoursite.com">
-        </form>
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/07/如何解决Switch无法登陆官网及下载问题/" data-id="ck6bv982k00069x4hwte90sri" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
 
 
+  
+    <article id="android-WifiManager使用介绍" class="article article-type-android" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/02/WifiManager使用介绍/" class="article-date">
+  <time datetime="2020-02-02T06:52:07.000Z" itemprop="datePublished">2020-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/02/WifiManager使用介绍/">WifiManager使用介绍</a>
+    </h1>
+  
 
-
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_blank">
-            <img src="/img/logo.png" alt="logo">
-        </a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>如果想要编写一个完整的功能封装，需要对系统提供的API有一个相对全面的了解，了解通过API能实现怎样的功能。<br>对于Wifi功能来说，简单构想出一下子可能存在的基本功能</p>
+<ol>
+<li>查询设备周边wifi相关信息。wifi信息必然存在相关强度，类型等，参考系统wifi配置页</li>
+<li>获取当前连接的wifi信息</li>
+<li>关闭及连接特定的wifi。不同的wifi项有不同的加密类型链接方式不同。<br>由基本功能可以组装来响应一个特定场景的问题</li>
+</ol>
+<p>如对于AP配网的一个场景，断开特定wifi，连接AP网络，配网成功后重新连接当前配置的网络</p>
+<p>交互图</p>
+<h3 id="接口封装说明"><a href="#接口封装说明" class="headerlink" title="接口封装说明"></a>接口封装说明</h3><p>封装可借鉴其他同学的方案，现在整理出一个通用的方案，ScanResult等<br>关于是否需要封装的必要呢？是否需要封装独立的数据结构？</p>
+<h3 id="实现AP配网功能"><a href="#实现AP配网功能" class="headerlink" title="实现AP配网功能"></a>实现AP配网功能</h3><p>如何模拟WIFI呢？</p>
+<h3 id="结束说明"><a href="#结束说明" class="headerlink" title="结束说明"></a>结束说明</h3>
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/02/WifiManager使用介绍/" data-id="ck6bv982g00049x4h95r4ps5j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能介绍/">功能介绍</a></li></ul>
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>Love Way</strong>
-        </div>
-        <div class="section-spacer"></div>
+    </footer>
+  </div>
+  
+</article>
 
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-        </ul>
 
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
+  
+    <article id="post-Android日志系统" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/07/Android日志系统/" class="article-date">
+  <time datetime="2019-04-06T16:21:30.000Z" itemprop="datePublished">2019-04-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/07/Android日志系统/">Android日志系统</a>
+    </h1>
+  
 
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Love Way&url=http://yoursite.com&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=Love Way&url=http://yoursite.com&via=Aderan" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=http://yoursite.com" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-        </ul>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>日志系统是线上问题查询，问题追踪的有效工具。关于日志系统</p>
+<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><p>日志同步<br>后台线程<br>Thread.setDefaultUncaughtExceptionHandler<br>崩溃时日志记录<br>长连接传输，Http传输</p>
+<h2 id="概念及验证"><a href="#概念及验证" class="headerlink" title="概念及验证"></a>概念及验证</h2>
+      
     </div>
-</div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/07/Android日志系统/" data-id="ck6bv982700009x4hhubkvqb8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    
-    <div class="locate-thumbnail-symbol"></div>
 
-    <!-- Pin on top -->
+  
+    <article id="post-Android面试问题整理" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/03/Android面试问题整理/" class="article-date">
+  <time datetime="2019-04-03T14:37:47.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
     
-
-    <!-- Normal Post -->
+  </div>
+  <div class="article-inner">
     
+    
+      <header class="article-header">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/Android面试问题整理/">Android面试问题整理</a>
+    </h1>
+  
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/04/07/Android日志系统/">Android日志系统</a></p>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h3 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h3><p>Standard<br>SingleTop 栈顶复用模式 onNewIntent<br>SingleTask 栈内复用模式单一Task复用，清除栈内所有其他Activity<br>SingleInstance 单实例模式</p>
+<h3 id="四大组建生命周期"><a href="#四大组建生命周期" class="headerlink" title="四大组建生命周期"></a>四大组建生命周期</h3><p>Service生命周期(onBind,onRebind,onCreate,onDestroy)<br>Activity生命周期(横竖屏切换, 前后台切换, 弹出Dialog, 有Dialog的时候按Home键)<br>onSaveInstanceState执行时机<br>    很可能导致销毁的情况（按下HOME键， 长按HOME任务列表，按下电源按键，启动Activity，横竖屏切换）<br>    onSaveInstanceState方法和onRestoreInstanceState方法“不一定”是成对的被调用的<br>Fragment各种情况下的生命周期<br>Activity与Fragment之间生命周期比较<br>简述Activity启动全部过程？<br>怎么启动Service，Service和Activity怎么进行数据交互<br>Activity栈<br>如何实现Fragment的滑动<br>Fragment之间传递数据的方式？<br>下拉状态栏是不是影响Activity的生命周期，如果在OnStop的时候做了网络请求，OnResume的时候怎么恢复<br>Service的开启方式<br>Activity与Service通信的方式<br>Activity之间的通信方式</p>
+<h3 id="Conetext"><a href="#Conetext" class="headerlink" title="Conetext"></a>Conetext</h3><p>AlertDialog,PopupWindow,Activity区别<br>Application中的Context和Activity中的Context的区别<br>这两者的生命周期是不同的，它们各自的使用场景不同;<br>显示Dialog (WindowManagerImpl实现不同，分支走的不同，Token未赋值)，启动Activity（FLAG_ACTIVITY_NEW_TASK），UI布局</p>
+<h3 id="Broadcast"><a href="#Broadcast" class="headerlink" title="Broadcast"></a>Broadcast</h3><p>Broadcast处理耗时操作<br>    IntentService，ThreadPool<br>BroadcastReceiver，LocalBroadcastReceiver 区别<br>降低Broadcast的响应范围，效率更高<br>动态注册和静态注册区别，有序广播和标准广播<br>广播的使用方式，场景</p>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><p>Android系统为什么会设计ContentProvider<br>    封装。对数据进行封装，提供统一的接口，使用者完全不必关心这些数据是在DB，XML、Preferences或者网络请求来的。当项目需求要改变数据来源时，使用我们的地方完全不需要修改。<br>    提供一种跨进程数据共享的方式。<br>    （对于概念与组件，需要了解其设计意图、使用场景、设计实现及主要接口及能力）<br>FileProvier的实现原理</p>
+<h3 id="Android消息机制原理"><a href="#Android消息机制原理" class="headerlink" title="Android消息机制原理"></a>Android消息机制原理</h3><p>Handler Looper MessageQueue，Native Looper机制<br>Handler实现机制（很多细节需要关注：如线程如何建立和退出消息循环等等）<br>关于Handler，在任何地方new Handler都是什么线程下</p>
+<h3 id="自定义UI组件"><a href="#自定义UI组件" class="headerlink" title="自定义UI组件"></a>自定义UI组件</h3><h4 id="Android事件分发机制"><a href="#Android事件分发机制" class="headerlink" title="Android事件分发机制"></a>Android事件分发机制</h4><p>dispatchTouchEvent,onInterceptTouchEvent,onTouchEvent<br>IMS,WMS,ViewRootImpl走相应的事件处理<br>点击事件被拦截，但是相传到下面的view，如何操作？</p>
+<h4 id="Android测量绘制机制"><a href="#Android测量绘制机制" class="headerlink" title="Android测量绘制机制"></a>Android测量绘制机制</h4><p>封装View的时候怎么知道View的大小<br>动态布局</p>
+<h3 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h3><p>进程共享和线程安全问题<br>Android IPC 跨进程通信时如何工作的<br>    Bundle，AIDL，Message，Socket，ContentProvider<br>为什么不能在子线程更新UI<br>    Code: ViewRootImpl checkThread判断线程<br>    复杂度，效率；GUI框架程序的复杂度，CPU复杂的处理，支持多线程操作，并不能提升多少效率，反而会使整个系统变得不好实现</p>
+<h3 id="性能优化及异常处理"><a href="#性能优化及异常处理" class="headerlink" title="性能优化及异常处理"></a>性能优化及异常处理</h3><p>Android相关优化（如内存优化、网络优化、布局优化、电量优化、业务优化）<br>性能优化如何分析systrace？</p>
+<h4 id="ANR"><a href="#ANR" class="headerlink" title="ANR"></a>ANR</h4><p>ANR怎么分析解决<br>    adb pull data/anr/traces.txt ./mytraces.txt<br>ANR如何产生？ANR的原因<br>    主线程占用CPU 5s，广播占用10s，在主线程中执行I/0，网络，数据库操作，或则特别复杂的计算</p>
+<h4 id="OOM，内存泄漏"><a href="#OOM，内存泄漏" class="headerlink" title="OOM，内存泄漏"></a>OOM，内存泄漏</h4><p>内存泄漏的可能原因？<br>用IDE如何分析内存泄漏？<br>内存泄露如何产生？<br>    静态变量引起<br>    匿名内部类（Block住）将非静态内部类修改为静态内部类，WeakRef<br>    资源未关闭引起的内存泄露情况<br>OOM的可能原因？<br>    HeapSize OOM(堆空间内存溢出)<br>    加载大图<br>    文件描述符(fd)数目超限<br>    线程数超限<br>    短时间内大量请求导致socket</p>
+<h4 id="App启动崩溃异常捕捉"><a href="#App启动崩溃异常捕捉" class="headerlink" title="App启动崩溃异常捕捉"></a>App启动崩溃异常捕捉</h4><p>Java层：Thread.UncaughtExceptionHandler<br>Native层：sigaction</p>
+<h4 id="怎么保证应用启动不卡顿，统计启动时长-标准"><a href="#怎么保证应用启动不卡顿，统计启动时长-标准" class="headerlink" title="怎么保证应用启动不卡顿，统计启动时长,标准"></a>怎么保证应用启动不卡顿，统计启动时长,标准</h4><p>adb shell am start -w packagename/activity<br>使用日志Application.attachBaseContext，onWindowFocusChanged<br>TraceView</p>
+<h3 id="介绍下SurfaceView"><a href="#介绍下SurfaceView" class="headerlink" title="介绍下SurfaceView"></a>介绍下SurfaceView</h3><p>可在Worker线程更新，双缓存机制；独立的Surface，再View树内，不支持View的Tween操作</p>
+<h3 id="SP是进程同步的吗-有什么方法做到同步"><a href="#SP是进程同步的吗-有什么方法做到同步" class="headerlink" title="SP是进程同步的吗?有什么方法做到同步"></a>SP是进程同步的吗?有什么方法做到同步</h3><p>不支持多进程，因为它是基于单个文件，且app对SP做了缓存，不好同步；<br>ContentProvider，进程统一操作法Service</p>
+<h3 id="描述清点击-Android-Studio-的-build-按钮后发生了什么"><a href="#描述清点击-Android-Studio-的-build-按钮后发生了什么" class="headerlink" title="描述清点击 Android Studio 的 build 按钮后发生了什么"></a>描述清点击 Android Studio 的 build 按钮后发生了什么</h3><p>gradle assemble；gradle初始化，config，excuter；下载本缓存三方依赖库，编译依赖module，res，aidl，打包签名，zipalign</p>
+<h3 id="大体说清一个应用程序安装到手机上时发生了什么；"><a href="#大体说清一个应用程序安装到手机上时发生了什么；" class="headerlink" title="大体说清一个应用程序安装到手机上时发生了什么；"></a>大体说清一个应用程序安装到手机上时发生了什么；</h3><p>copy /data/app/，解压lib，创建存储文件，解析Manifest文件，创建快捷方式。</p>
+<h3 id="App-是如何沙箱化，为什么要这么做；"><a href="#App-是如何沙箱化，为什么要这么做；" class="headerlink" title="App 是如何沙箱化，为什么要这么做；"></a>App 是如何沙箱化，为什么要这么做；</h3><p>权限隔离，内部数据隔离（data/data）私有存储uid，为了安全<br>每个应用分配一个UID，签名相同可配置共享UID<br>权限管理系统（底层的权限是如何进行 grant 的）</p>
+<h3 id="Android中数据存储方式"><a href="#Android中数据存储方式" class="headerlink" title="Android中数据存储方式"></a>Android中数据存储方式</h3><p>Sqlite，SharePreference，File</p>
+<h3 id="Android中进程内存的分配，能不能自己分配定额内存"><a href="#Android中进程内存的分配，能不能自己分配定额内存" class="headerlink" title="Android中进程内存的分配，能不能自己分配定额内存"></a>Android中进程内存的分配，能不能自己分配定额内存</h3><h3 id="热修复-插件化"><a href="#热修复-插件化" class="headerlink" title="热修复,插件化"></a>热修复,插件化</h3><p>插件化：四大组件及生命周期，资源加载问题<br>热修复：类加载机制：DexList的最前端；CLASS_ISPREVERIFIED问题，javaassist和asm修改；Tinker差分合并解决</p>
+<h2 id="Android-Framework"><a href="#Android-Framework" class="headerlink" title="Android Framework"></a>Android Framework</h2><h3 id="Binder机制介绍"><a href="#Binder机制介绍" class="headerlink" title="Binder机制介绍"></a>Binder机制介绍</h3><p>binder驱动，servicemanger， systemserver， AMS，WMS，surfaceflinger，AIDL<br>Bundle 机制</p>
+<h3 id="AndroidManifest的作用与理解"><a href="#AndroidManifest的作用与理解" class="headerlink" title="AndroidManifest的作用与理解"></a>AndroidManifest的作用与理解</h3><h3 id="App启动流程，从点击桌面开始"><a href="#App启动流程，从点击桌面开始" class="headerlink" title="App启动流程，从点击桌面开始"></a>App启动流程，从点击桌面开始</h3><p>AMS，CreateApp，AMS，ActivityThread等</p>
+<h3 id="画出Android的大体架构图"><a href="#画出Android的大体架构图" class="headerlink" title="画出Android的大体架构图"></a>画出Android的大体架构图</h3><p>Linux HAL Libc（Webkit，Sqlite），JVM，Framework，Application</p>
+<h4 id="进程和Application的生命周期；"><a href="#进程和Application的生命周期；" class="headerlink" title="进程和Application的生命周期；"></a>进程和Application的生命周期；</h4><p>系统启动流程 Zygote进程 –&gt; SystemServer进程 –&gt; 各种系统服务 –&gt; 应用进程</p>
+<h3 id="UI优化"><a href="#UI优化" class="headerlink" title="UI优化"></a>UI优化</h3><p>RecycleView的使用，原理，RecycleView优化<br>RecyclerView ListView的区别,性能<br>ListView图片加载错乱的原理和解决方案<br>用View复用机制和异步操作，（tag，url绑定加载前确认）</p>
+<h3 id="AsyncTask"><a href="#AsyncTask" class="headerlink" title="AsyncTask"></a>AsyncTask</h3><p>多线程（关于AsyncTask缺陷引发的思考）<br>AsyncTask机制<br>如何取消AsyncTask</p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>数据库数据迁移问题<br>    根据数据库版本逐代升级，设计数据库考虑可扩展</p>
+<h3 id="架构模式"><a href="#架构模式" class="headerlink" title="架构模式"></a>架构模式</h3><p>模式MVP，MVC，MVVM<br>项目组件化的理解<br>    组件化PaySDK，MapSDK，UI组件等。模块化将业务分离，通过相应路由协议相互调用</p>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><p>进程保活<br>App中唤醒其他进程的实现方式<br>简述IPC？<br>Android进程分类<br>进程间通信的机制<br>序列化<br>Android为什么引入Parcelable<br>序列化的作用，以及 Android 两种序列化的区别。<br>有没有尝试简化Parcelable的使用<br>多进程场景遇见过么？<br>   IM进程，推送进程，图片处理是独立的进程，图片合成进程</p>
+<h3 id="JNI"><a href="#JNI" class="headerlink" title="JNI"></a>JNI</h3><p>是否熟悉Android jni开发，jni如何调用java层代码</p>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><h4 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h4><p>Java线程，Java线程工作内存，Save/Load，JVM主内存<br>软引用、弱引用区别<br>垃圾回收<br>JVM内存模型，内存区域<br>Java中同步使用的关键字，死锁<br>JVM内存模型<br>垃圾回收机制与调用System.gc()区别</p>
+<h4 id="垃圾回收机制与调用System-gc-区别"><a href="#垃圾回收机制与调用System-gc-区别" class="headerlink" title="垃圾回收机制与调用System.gc()区别"></a>垃圾回收机制与调用System.gc()区别</h4><p>JVM 内存区域 开线程影响哪块内存<br>垃圾收集机制 对象创建，新生代与老年代<br>    Eden，Survivor * 2，老年代，永久代<br>Java四中引用<br>    强引用，软引用，弱引用，虚引用<br>强引用置为null，会不会被回收？<br>    需要等到GC时候被回收，新生代和老年代的GC可能是分开GC的，对大对象可能放在老年代，直接置null可能被更快回回收。<br>如何保证多线程读写文件的安全？<br>Java中内存区域与垃圾回收机制<br>垃圾收集器</p>
+<h4 id="谈谈ClassLoader"><a href="#谈谈ClassLoader" class="headerlink" title="谈谈ClassLoader"></a>谈谈ClassLoader</h4><h4 id="GC回收策略"><a href="#GC回收策略" class="headerlink" title="GC回收策略"></a>GC回收策略</h4><h4 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h4><p>类加载机制<br>双亲委派模型<br>亲祖委派模型，保证类的唯一性（加载器相同，类全名相同）</p>
+<h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><h4 id="LruCache原理"><a href="#LruCache原理" class="headerlink" title="LruCache原理"></a>LruCache原理</h4><p>Size，Hit/Miss，LinkedHashMap，LinkedHashMapEntry recordAccess 插入尾部</p>
+<h4 id="HashMap源码-SpareArray原理"><a href="#HashMap源码-SpareArray原理" class="headerlink" title="HashMap源码,SpareArray原理"></a>HashMap源码,SpareArray原理</h4><p>// SpareArray 二分查找<br>private int[] mKeys;<br>private Object[] mValues;<br>private int mSize;</p>
+<h4 id="容器代码"><a href="#容器代码" class="headerlink" title="容器代码"></a>容器代码</h4><p>HashMap实现原理，ConcurrentHashMap 的实现原理<br>Hash槽，Hash桶，死链和对象丢失<br>ConcurrentHashMap 每次加锁的开销，1.8之前ReetrantLock 分段锁；JDK11：CAS取消分段锁，引入红黑树，更优的集合元素统计<br>集合Set实现Hash怎么防止碰撞<br>ArrayList和LinkedList的区别，以及应用场景<br>集合的接口和具体实现类，介绍<br>TreeMap具体实现(红黑树)<br>List,Set,Map的区别<br>列表顺序结构，Set的散列结构，Map记录键值对；Map entrySet<br>Hashmap如何put数据（从hashmap源码角度讲解）？<br>HashSet与HashMap怎么判断集合元素重复<br>二叉树，给出根节点和目标节点，找出从根节点到目标节点的路径<br>内部类和静态内部类和匿名内部类，以及项目中的应用<br>静态内部类的设计意图。<br>    HashMap Entry,ThreadLocal.ThreadLocalMap,单继承<br>HashMap的实现，与HashSet的区别（HashSet内部使用HashMap实现，只是value值为同一静态对象）<br>Object类的equal和hashcode方法重写，为什么？</p>
+<h4 id="多线程线程操作List"><a href="#多线程线程操作List" class="headerlink" title="多线程线程操作List"></a>多线程线程操作List</h4><p>CopyOnWriteArrayList写时拷贝，适合一写多读情况<br>Collections.synchronizedList()</p>
+<h3 id="线程及并发"><a href="#线程及并发" class="headerlink" title="线程及并发"></a>线程及并发</h3><h4 id="线程基础"><a href="#线程基础" class="headerlink" title="线程基础"></a>线程基础</h4><p>线程和进程的区别？<br>为什么要有线程，而不是仅仅用进程？<br>线程同步，线程通信的概念</p>
+<h4 id="Java线程池-ThreadPoolExecutor"><a href="#Java线程池-ThreadPoolExecutor" class="headerlink" title="Java线程池,ThreadPoolExecutor"></a>Java线程池,ThreadPoolExecutor</h4><p>corePoolSize 核心线程不会被销毁<br>maximumPoolSize 同时执行的线程数，<br>keepAliveTime后清理，allowCoreThreadTimeOut<br>workQueue，大于core入队列<br>handler，拒绝处理</p>
+<h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>并发集合了解哪些<br>CAS介绍</p>
+<h4 id="Java中对象的生命周期"><a href="#Java中对象的生命周期" class="headerlink" title="Java中对象的生命周期"></a>Java中对象的生命周期</h4><pre><code>NEW,RUNNABLE,RUNNING,BLOCKED(同步阻塞，等待阻塞，主动阻塞),DEAD
+</code></pre><h4 id="保证线程安全"><a href="#保证线程安全" class="headerlink" title="保证线程安全"></a>保证线程安全</h4><p>数据线程内可见，只读对象，线程安全类，同步及锁机制<br>并发包：线程同步类，并发集合，线程管理类，锁相关类</p>
+<h4 id="ThreadLocal-原理"><a href="#ThreadLocal-原理" class="headerlink" title="ThreadLocal 原理"></a>ThreadLocal 原理</h4><p>ThreadLocalMap (getMap(t))， Entry<br>volatile<br>    可见性，Java的内存模型，不同线程间存在各自的工作内存，与JVM主内存数据不同步，强制回写（读写操作不是原子操作）<br>    防止指令优化（重排序）<br>Synchronized与Lock的区别（Synchronized与ReentrantLock）<br>    等待可中断，公平锁（可抢占），同时绑定多个Condition对象；资源竞争不是很激烈时候Synchronized性能高一点<br>ReentrantLock的内部实现<br>Synchronized语法支持，monitorenter，monitorexit（监视锁），Lock AQS 并发库<br>sleep 和 wait的区别<br>sleep不释放锁，wait释放锁；sleep是Thread方法，wait是object方法<br>static synchronized 方法的多线程访问和作用，同一个类里面两个synchronized方法，两个线程同时访问的问题<br>wait/notify</p>
+<h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><p>线程死锁的4个条件？<br>互斥条件，占有等待、不可抢占、循环等待</p>
+<h4 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h4><p>开启线程的三种方式,run()和start()方法区别<br>    继承Thread覆盖run方法，使用Runnable使用FutureTask，（run执行内容，start处理线程状态，初始化本地线程）<br>线程如何关闭，以及如何防止线程的内存泄漏<br>如何实现线程同步？</p>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 为什么要设计成不可变的？<br>StringBuffer与StringBuilder的区别？<br>StringBuffer线程安全，StringBuilder非线程安全，性能优化</p>
+<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><h4 id="Java注解"><a href="#Java注解" class="headerlink" title="Java注解"></a>Java注解</h4><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><h3 id="图片加载原理"><a href="#图片加载原理" class="headerlink" title="图片加载原理"></a>图片加载原理</h3><p>Glide，picasso，Fresco；缓存机制<br>Glide 使用什么缓存？<br>    LruCache，LinkedHashMap，accessOrder = true<br>Glide 内存缓存如何控制大小？<br>Bitmap Recycler相关<br>    新版去除bitmap = null，回在GC的时候由JVM释放，当然如果确定不再使用的可以调用recycle释放<br>Bitmap 使用时候注意什么？<br>OOM 是否可以try catch ？<br>    1，这个问题怎么思考，明知道可能OOM，是否考虑有其他的解决方法，很多时候OOM可能由其他区域的内存过度消耗<br>图片加载库相关，bitmap如何处理大图，如一张30M的大图，如何预防OOM<br>    2，根据具体需求，选择使用BitmapRegionDecoder或则使用inSampleSize</p>
+<h3 id="Okhttp"><a href="#Okhttp" class="headerlink" title="Okhttp"></a>Okhttp</h3><p>拦截器（Interceptor），重试，转换，缓存，连接，请求</p>
+<h3 id="EventBus实现原理"><a href="#EventBus实现原理" class="headerlink" title="EventBus实现原理"></a>EventBus实现原理</h3><p>EventBus作用，实现方式，代替EventBus的方式</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="断点续传的实现"><a href="#断点续传的实现" class="headerlink" title="断点续传的实现"></a>断点续传的实现</h3><p>Http：1，服务器支持Range字段；2，客户端再次请求时候符合Range字段规定；3，Md5验证<br>Tcp自定义：支持Range，Md5验证</p>
+<h3 id="模块化实现（好处，原因）"><a href="#模块化实现（好处，原因）" class="headerlink" title="模块化实现（好处，原因）"></a>模块化实现（好处，原因）</h3><p>多团队并行开发，模块间解耦，单模块执行提高效率</p>
+<h3 id="RxJava的作用，优缺点"><a href="#RxJava的作用，优缺点" class="headerlink" title="RxJava的作用，优缺点"></a>RxJava的作用，优缺点</h3><p>RxJava的作用，与平时使用的异步操作来比，优势<br>缺点，新的编程思维，有一定的学习成本；Emit不可变对象，可能会又多份。<br>RxJava Rx = Observables + LINQ + Schedulers。<br>响应式扩展，基于观察者模式扩展，封装了线程、同步、线程安全、并发数据结构和非阻塞IO等细节，<br>RxJava简介及其源码解读？<br>RxJava的功能与原理实现</p>
+<h3 id="登录支付相关加密算法"><a href="#登录支付相关加密算法" class="headerlink" title="登录支付相关加密算法"></a>登录支付相关加密算法</h3><p>对称加密算法：3DES传输数据，AES登录数据加密<br>非对称加密：RSA传输密钥<br>对加密算法（如RSA）等是否有了解<br>计算机密码学及加密算法<br>    加解密，hash及摘要等<br>    DES和RSA两种算法各有优缺点：<br>    DES算法处理速度快，而RSA算法速度慢很多；<br>    DES密钥分配困难，而RSA简单；<br>    DES适合用于加密信息内容比较长的场合，而RSA适合用于信息保密非常重要的场合；<br>    混合密码体制则是综合了前两者的优点而设计，动态生产DES密钥，使用RSA传输DES密钥，使用DES传输数据</p>
+<h3 id="如何保持应用的稳定性"><a href="#如何保持应用的稳定性" class="headerlink" title="如何保持应用的稳定性"></a>如何保持应用的稳定性</h3><p>少出错（静态检测，代码review，单元测试，测试规范，积累工程实践），快速解决（线上监测）</p>
+<h3 id="算法及数据结构"><a href="#算法及数据结构" class="headerlink" title="算法及数据结构"></a>算法及数据结构</h3><p>上一问扩展，海量数据，内存中放不下，怎么求出。<br>堆排序过程，时间复杂度，空间复杂度<br>快速排序的时间复杂度，空间复杂度</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="Https请求慢的解决办法"><a href="#Https请求慢的解决办法" class="headerlink" title="Https请求慢的解决办法"></a>Https请求慢的解决办法</h4><p>DNS，携带数据，直接访问IP<br>Https相关，如何验证证书的合法性CA认证，Https中哪里用了对称加密，哪里用了非对称加密，<br>TCP与UDP区别与应用（三次握手和四次挥手）涉及到部分细节（如client如何确定自己发送的消息被server收到） HTTP相关 提到过Websocket 问了WebSocket相关以及与socket的区别<br>简述Tcp四次挥手?<br>网络请求缓存处理，Okhttp如何处理网络缓存的</p>
+<h4 id="TCP-UDP的区别"><a href="#TCP-UDP的区别" class="headerlink" title="TCP/UDP的区别"></a>TCP/UDP的区别</h4><p>面向连接的，基于字节流的，协议定义拥塞机制；无连接，基于数据包的，无拥塞机制；粘包情况</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>抽象类和接口的区别<br>抽象意义不同，Java本事是单继承的，抽象类可以有非抽象方法，抽象类的方法权限可控制，接口public<br>MVP模式<br>设计模式<br>观察者模式，适配器模式，装饰者模式，外观模式的异同？<br>    Adapter，Decortor，Facade（例如Android中哪里使用了观察者模式，单例模式相关）<br>    观察者数据类同步，抽象意义上单例，Eventbus，图片加载，图片缓存等<br>手写生产者/消费者模式</p>
+
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/03/Android面试问题整理/" data-id="ck6bv982t000f9x4h6sekhz66" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+
+  
+    <article id="post-文章Pending" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/03/文章Pending/" class="article-date">
+  <time datetime="2019-04-03T04:26:13.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
-            介绍日志系统是线上...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/04/07/Android日志系统/" target="_self">阅读全文</a>
-        </span>
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/文章Pending/">文章Pending</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Handler-Looper-MessageQueue-Handler"><a href="#Handler-Looper-MessageQueue-Handler" class="headerlink" title="Handler Looper MessageQueue Handler"></a>Handler Looper MessageQueue Handler</h3><p>Step 1 Java层分析<br>Step 2 入口MessageQueue.pollOnce分析</p>
+<h3 id="Binder机制"><a href="#Binder机制" class="headerlink" title="Binder机制"></a>Binder机制</h3><h3 id="关于阅读源码那些事"><a href="#关于阅读源码那些事" class="headerlink" title="关于阅读源码那些事"></a>关于阅读源码那些事</h3><p>What，Why，How</p>
+
+      
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>4月 07, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/03/文章Pending/" data-id="ck6bv982l00079x4hhmvu8t8d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
 
-            
 
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+  
+    <article id="post-智能家居协议及实践构想" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/30/智能家居协议及实践构想/" class="article-date">
+  <time datetime="2019-03-30T07:59:00.000Z" itemprop="datePublished">2019-03-30</time>
+</a>
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+  </div>
+  <div class="article-inner">
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
     
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/04/03/Android面试问题整理/">Android面试问题整理</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+      <header class="article-header">
         
-            An...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/04/03/Android面试问题整理/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>4月 03, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/30/智能家居协议及实践构想/">智能家居协议及实践构想</a>
+    </h1>
+  
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
+      </header>
     
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/04/03/文章Pending/">文章Pending</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/04/03/文章Pending/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>4月 03, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/30/智能家居协议及实践构想/">智能家居协议及实践构想</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            介绍
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/30/智能家居协议及实践构想/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>3月 30, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/30/OAuth2介绍/">OAuth2.0介绍</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            介绍
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/30/OAuth2介绍/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>3月 30, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/29/Openssl分析环境/">Https介绍--环境搭建</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            导言本文涉及一些H...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/29/Openssl分析环境/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>3月 29, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/03/29/Hexo使用介绍/">Hexo使用介绍</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/03/29/Hexo使用介绍/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>3月 29, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/01/20/GUI程序开发/">GUI程序开发</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            导言GUI程序开发...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/01/20/GUI程序开发/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Aderan's avatar">
-            </div>
-            <div>
-                <strong>Aderan</strong>
-                <span>1月 20, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="Aderan's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        aderan@163.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a>
-            </li></ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><ul>
+<li>Infrared（红外协议）</li>
+<li>WiFi （局域网，UPnP等）</li>
+<li>Bluetooth（蓝牙）</li>
+<li>Zigbee</li>
 </ul>
+<h3 id="UPnP及相关自定义协议"><a href="#UPnP及相关自定义协议" class="headerlink" title="UPnP及相关自定义协议"></a>UPnP及相关自定义协议</h3><ul>
+<li>寻址：<br>  定义一个设备由唯一地址。</li>
+<li>发现：<br>  CP或Device加入时候相互通知</li>
+<li>描述：<br>  CP需要获取Device的详细描述及能力集合</li>
+<li>控制：<br>  CP通过通用能力控制设备的状态，同时设备返回相关控制结果，跨设备，所以是一种RPC方式</li>
+<li>事件：<br>  设备再状态变更时候广播通知所有CP</li>
+<li>展示：<br>  设备需要提供设备显示能力，如支持Browser浏览设备状态</li>
+</ul>
+<h3 id="适配实践构想"><a href="#适配实践构想" class="headerlink" title="适配实践构想"></a>适配实践构想</h3><p>如何构建一个智能家居平台，服务于不同的制造商，能让制造商更方便的接入智能家居平台。</p>
+<ol>
+<li>对于软件开发者来说，协议可能有变化，有的遵循Upnp，有的支持rokid的Home，或许又有小米设定一套自己的标准协议，再协议不通用的情况下，如何设置这个一个系统？</li>
+<li>需要考虑不同属性设备具有不同的能力集合，如灯有开，关，设置颜色，设置亮度；冰箱能调整冷藏箱、冷冻箱温度。电视能开关，能接受遥控器等价按钮操作等等。适配需求，不同的device及能力的适配?</li>
+<li>需要考虑如何让不同设备商能定义扩展协议，如海尔的冰箱如果有特殊能力集合，如何再协议端支持扩展，同时如何再CP端支持界面控制扩展。</li>
+</ol>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://spirespark.com/dlna/guidelines/" target="_blank" rel="noopener">DLNA Guidelines</a></p>
+<p><a href="http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v2.0.pdf" target="_blank" rel="noopener">UPnP Device Architecture 2.0</a></p>
+<p><a href="https://rokid.github.io/docs/rokid-homebase-docs/" target="_blank" rel="noopener">rokid-homebase-docs</a></p>
 
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
+      
     </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/30/智能家居协议及实践构想/" data-id="ck6bv982m00089x4hshv0fo4o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hide/">hide</a></li></ul>
 
-    <!-- Sidebar Image -->
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-OAuth2介绍" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/30/OAuth2介绍/" class="article-date">
+  <time datetime="2019-03-30T07:37:25.000Z" itemprop="datePublished">2019-03-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/30/OAuth2介绍/">OAuth2.0介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><h4 id="认证模式"><a href="#认证模式" class="headerlink" title="认证模式"></a>认证模式</h4><h4 id="安全说明"><a href="#安全说明" class="headerlink" title="安全说明"></a>安全说明</h4><h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">理解OAuth 2.0_阮一峰</a><br><a href="https://www.chrisyue.com/security-issue-about-oauth-2-0-you-should-know.html" target="_blank" rel="noopener">关于 OAuth 2.0安全性你应该要知道的一些事</a><br><a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noopener">The OAuth 2.0 Authorization Framework</a><br><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317851&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">移动应用微信登录开发指南</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/30/OAuth2介绍/" data-id="ck6bv982f00039x4hayl9aiji" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hide/">hide</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Openssl分析环境" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/29/Openssl分析环境/" class="article-date">
+  <time datetime="2019-03-29T06:28:53.000Z" itemprop="datePublished">2019-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/29/Openssl分析环境/">Https介绍--环境搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h3><p>本文涉及一些Https相关简单知识，通过搭建一个支持Https的本地服务，使用Wireshark查看TLS数据及字段概念，为后续深入了解TLS及https构建环境。</p>
+<p>首先会介绍一下Openssl创建自签名证书的流程，并对X.509标准下的数字证书做一点简单的介绍，希望能理清一些术语或概念的认知。然后配置本地Https的服务，使能通过浏览器访问简单页面。通过Wireshark抓取本地端口的相关数据简单查看下TLS层。</p>
+<p>本文相信，通过实际的操作、尝试、思考，能对相关的知识有更直观的了解。</p>
+<h3 id="使用Openssl创建自签名证书"><a href="#使用Openssl创建自签名证书" class="headerlink" title="使用Openssl创建自签名证书"></a>使用Openssl创建自签名证书</h3><p>X.509是一套公钥证书标准，生成证书过程中，会涉及到很多文件，这里暂时只说明三个扩展名，.key、.csr、.crt</p>
+<ul>
+<li>.key文件存储服务器私钥；</li>
+<li>.csr文件为发送至CA签名的请求文件，为certificate signing request缩写；</li>
+<li>.crt为CA签名后的文件。即最终公钥私钥为.crt和.key文件。</li>
+</ul>
+<p>通过openssl签名创建过程的介绍及后续Nginx配置使用的文件对比，能更好的了解不同文件的概念。本节先介绍下整个自签名证书创建流程。</p>
+<h4 id="创建服务器私钥"><a href="#创建服务器私钥" class="headerlink" title="创建服务器私钥"></a>创建服务器私钥</h4><p><code>openssl genrsa -des3 -out server.key 1024</code></p>
+<p>创建时需要输入密码，为方便说明，设置密码为123456。</p>
+<p>cat server.key，可以看到，文件中包含RSA私钥，DES及分组模式CBC等信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN RSA PRIVATE KEY-----</span><br><span class="line">Proc-Type: 4,ENCRYPTED</span><br><span class="line">DEK-Info: DES-EDE3-CBC,FBDA8344A729AEA4</span><br><span class="line"></span><br><span class="line">865SFWFNrNAmLuPQJXirwd7mj5xuKdLIcdCtkijj02JplMQ76dDfj1BaCj/qGUZG</span><br><span class="line">FqZpZce47bemYoi1+3BTY8wy8eYfK+3D5ycnFnjx+uE+xySS9japDPaBwtLvL/Ao</span><br><span class="line">EnMkHrPLYCimcndjskyH9zFmfC9yeP0uCUeY4MPSJmHlHX6+hmUnFEC42NIZcC4R</span><br><span class="line">QDmC72w1T3zPlvwtVQ7gcKL9UwcMMDcqHF/hNGTmfGV83glMkYULpTMKCt2Kccn1</span><br><span class="line">4Rn8Yd7tRlK5qUnGoZPh2Ic5zdX1hmENWBJjQCydzHnmG3/ukGi/vR9mu+oGcqj6</span><br><span class="line">YcB7EZlzPY/i1UXo8T6mZSXNVjUDz7t48sazd/6vvlNrG1mQ9N+AC6u0xyLoA8xE</span><br><span class="line">hDurs1uugkgPWOn4PelPtACo7CODkCRvuKoa1tEFTqlTCo67oxAttgIOtEHMOBwU</span><br><span class="line">H04kvfdHroJU//GomL1H+m8asexjJAPDZEdoWB++OTYtwviuE9VUCwpUfgdQEmdz</span><br><span class="line">OL1F9ntzfi9U34wYKPz2bJhUOEu28KFxYiRstl6ACDCtYjjoSf0doLWd7onA7/zo</span><br><span class="line">zo9C5384CcpwX1RhvrCxfM/5CLuL/a9S1NURp5hoX6NyeHnJA4OK83gFr0srwO9n</span><br><span class="line">E2eZH6NBWvfkuMJFG+gpeYcgL84fn19+H88Jd979Qzcgpt3jIqRzfW4+vLuhou7G</span><br><span class="line">i+iW1YLFTUPyLXjJF//DLBlDVLVwYORo24hWfNfeI7fiqPSO3EZZLt6/YbBQkP9i</span><br><span class="line">0U6rieB7gV+IegowzfWDauXkLiVLVlGwXU3SB7Pz8yobiIvedbVHGg==</span><br><span class="line">-----END RSA PRIVATE KEY-----</span><br></pre></td></tr></table></figure></p>
+<h4 id="生成服务器端证书签名请求文件-csr文件"><a href="#生成服务器端证书签名请求文件-csr文件" class="headerlink" title="生成服务器端证书签名请求文件(csr文件)"></a>生成服务器端证书签名请求文件(csr文件)</h4><p><code>openssl req -new -key server.key -out server.csr</code></p>
+<p>可以看到.csr文件由.key文件生成，需要输入第一步设置的密码123456。之后需要填入相关证书信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">Country Name (2 letter code) []:CN</span><br><span class="line">State or Province Name (full name) []:ZJ</span><br><span class="line">Locality Name (eg, city) []:HZ</span><br><span class="line">Organization Name (eg, company) []:aderan</span><br><span class="line">Organizational Unit Name (eg, section) []:network</span><br><span class="line">Common Name (eg, fully qualified host name) []:aderan.com</span><br><span class="line">Email Address []:aderan@163.com</span><br><span class="line"></span><br><span class="line">Please enter the following &apos;extra&apos; attributes</span><br><span class="line">to be sent with your certificate request</span><br><span class="line">A challenge password []:111111</span><br></pre></td></tr></table></figure></p>
+<p>按正常流程，使用生成.csr文件向公认的CA机构去签名申请.crt。</p>
+<p>以下为自签名流程。</p>
+<h4 id="生成CA证书文件"><a href="#生成CA证书文件" class="headerlink" title="生成CA证书文件"></a>生成CA证书文件</h4><p><code>openssl genrsa -des3 -out ca.key 1024</code></p>
+<p>设置ca.key密码为654321</p>
+<h4 id="生成CA自签名证书"><a href="#生成CA自签名证书" class="headerlink" title="生成CA自签名证书"></a>生成CA自签名证书</h4><p><code>openssl req -new -x509 -key ca.key -out ca.crt -days 3650</code></p>
+<p>输入ca.key密码，输入相关对应信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-----</span><br><span class="line">Country Name (2 letter code) []:CN</span><br><span class="line">State or Province Name (full name) []:ZJ</span><br><span class="line">Locality Name (eg, city) []:HZ</span><br><span class="line">Organization Name (eg, company) []:aderan</span><br><span class="line">Organizational Unit Name (eg, section) []:network</span><br><span class="line">Common Name (eg, fully qualified host name) []:aderan.com</span><br><span class="line">Email Address []:aderan@163.com</span><br></pre></td></tr></table></figure></p>
+<h4 id="利用CA证书对服务端请求文件进行签名"><a href="#利用CA证书对服务端请求文件进行签名" class="headerlink" title="利用CA证书对服务端请求文件进行签名"></a>利用CA证书对服务端请求文件进行签名</h4><p><code>openssl ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key</code></p>
+<p>此时会出现很多错误提示，例如<br>Using configuration from /private/etc/ssl/openssl.cnf<br>variable lookup failed for ca::default_ca<br>解决方案:<br>配置相应的openssl，参考<a href="https://www.phildev.net/ssl/opensslconf.html" target="_blank" rel="noopener">opensslconf</a>配置，以下为简单新增的一些配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[ ca ]</span><br><span class="line">default_ca = Ca_default #引用子配置项</span><br><span class="line"></span><br><span class="line">[ Ca_default ]</span><br><span class="line">dir          = /var/ca</span><br><span class="line">certs           = $dir/certsdb</span><br><span class="line">new_certs_dir   = $certs</span><br><span class="line">database        = $dir/index.txt</span><br><span class="line">certificate     = $dir/cacert.pem</span><br><span class="line">private_key     = $dir/private/cakey.pem</span><br><span class="line">serial          = $dir/serial</span><br><span class="line">crldir          = $dir/crl</span><br><span class="line">crlnumber       = $dir/crlnumber</span><br><span class="line">crl             = $crldir/crl.pem</span><br><span class="line">RANDFILE        = $dir/private/.rand</span><br><span class="line"></span><br><span class="line">default_md = md5</span><br><span class="line">policy     = policy_anything</span><br><span class="line">default_days  = 365</span><br><span class="line"></span><br><span class="line">[ policy_anything ]</span><br><span class="line">countryName             = optional</span><br><span class="line">stateOrProvinceName     = optional</span><br><span class="line">localityName            = optional</span><br><span class="line">organizationName        = optional</span><br><span class="line">organizationalUnitName  = optional</span><br><span class="line">commonName              = supplied</span><br><span class="line">emailAddress            = optional</span><br></pre></td></tr></table></figure></p>
+<p>/var/ca/index.txt: No such file or directory<br>unable to open ‘/var/ca/index.txt’<br>解决方案：<br><code>touch /var/ca/index.txt</code></p>
+<p>/var/ca/serial: No such file or directory<br>error while loading serial number<br>解决方案：<br><code>touch /var/ca/serial &amp;&amp; echo 01  &gt;&gt; /var/ca/serial</code></p>
+<p>Write out database with 1 new entries<br>/var/ca/certsdb/01.pem: No such file or directory<br>解决方案：<br><code>mkdir /var/ca/certsdb</code></p>
+<p>正常执行，目录下会生成自签名后的文件server.crt<br><br>cat server.crt，查看到类似如下文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">Certificate:</span><br><span class="line">    Data:</span><br><span class="line">        Version: 1 (0x0)</span><br><span class="line">        Serial Number: 1 (0x1)</span><br><span class="line">    Signature Algorithm: md5WithRSAEncryption</span><br><span class="line">        Issuer: C=CN, ST=ZJ, L=HZ, O=XXX, OU=aderan, CN=aderan.com/emailAddress=aderan@163.com</span><br><span class="line">        Validity</span><br><span class="line">            Not Before: Mar 28 02:39:15 2019 GMT</span><br><span class="line">            Not After : Mar 27 02:39:15 2020 GMT</span><br><span class="line">        Subject: C=CN, ST=ZJ, L=HZ, O=XXX, OU=aderan, CN=aderan.com/emailAddress=aderan@163.com</span><br><span class="line">        Subject Public Key Info:</span><br><span class="line">            Public Key Algorithm: rsaEncryption</span><br><span class="line">                Public-Key: (1024 bit)</span><br><span class="line">                Modulus:</span><br><span class="line">                    00:cd:8c:72:24:c9:29:47:54:9e:49:ac:c1:1c:10:</span><br><span class="line">                    d4:2d:6a:5a:a8:b9:f8:e4:17:ff:2b:c9:80:ec:03:</span><br><span class="line">                    07:e8:8e:29:bd:08:3f:16:83:93:38:05:0b:0f:4a:</span><br><span class="line">                    00:f5:f8:cd:c2:98:66:65:c2:d7:83:05:c5:81:79:</span><br><span class="line">                    1e:a4:18:dd:9e:de:bd:aa:02:cf:25:6c:0b:0e:6f:</span><br><span class="line">                    c7:bc:bb:c1:b6:91:b7:aa:d2:a3:1c:bf:70:cf:ba:</span><br><span class="line">                    96:07:74:5b:4e:fb:c7:b6:6e:f7:d8:06:bf:21:32:</span><br><span class="line">                    da:3d:58:2f:6d:16:66:fc:92:c1:85:05:68:ef:1f:</span><br><span class="line">                    9f:7a:16:9f:8f:21:40:33:a5</span><br><span class="line">                Exponent: 65537 (0x10001)</span><br><span class="line">    Signature Algorithm: md5WithRSAEncryption</span><br><span class="line">         3c:3f:a7:da:9a:0f:40:99:15:5c:a6:a5:27:22:fa:56:80:90:</span><br><span class="line">         cd:40:7a:84:2a:24:64:e8:ab:cf:ae:25:69:66:ec:f2:95:e5:</span><br><span class="line">         18:20:69:80:73:40:70:de:71:3d:5e:3c:b2:58:5d:b8:70:7b:</span><br><span class="line">         ea:c8:37:20:89:22:e0:17:4b:3d:b2:5f:78:44:a4:71:0e:f8:</span><br><span class="line">         c4:32:a9:4f:05:69:86:aa:09:1b:7d:b7:47:a9:c7:a8:6a:24:</span><br><span class="line">         18:a0:d6:25:70:48:09:e7:f8:66:cc:f6:2b:6d:0a:01:13:c6:</span><br><span class="line">         f5:c7:88:e2:7f:aa:91:26:0c:22:36:6c:ff:e9:43:83:75:d2:</span><br><span class="line">         02:55</span><br><span class="line">-----BEGIN CERTIFICATE-----</span><br><span class="line">MIICYzCCAcwCAQEwDQYJKoZIhvcNAQEEBQAwejELMAkGA1UEBhMCQ04xCzAJBgNV</span><br><span class="line">BAgMAlpKMQswCQYDVQQHDAJIWjEMMAoGA1UECgwDWFhYMQ8wDQYDVQQLDAZhZGVy</span><br><span class="line">YW4xEzARBgNVBAMMCmFkZXJhbi5jb20xHTAbBgkqhkiG9w0BCQEWDmFkZXJhbkAx</span><br><span class="line">NjMuY29tMB4XDTE5MDMyODAyMzkxNVoXDTIwMDMyNzAyMzkxNVowejELMAkGA1UE</span><br><span class="line">BhMCQ04xCzAJBgNVBAgMAlpKMQswCQYDVQQHDAJIWjEMMAoGA1UECgwDWFhYMQ8w</span><br><span class="line">DQYDVQQLDAZhZGVyYW4xEzARBgNVBAMMCmFkZXJhbi5jb20xHTAbBgkqhkiG9w0B</span><br><span class="line">CQEWDmFkZXJhbkAxNjMuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN</span><br><span class="line">jHIkySlHVJ5JrMEcENQtalqoufjkF/8ryYDsAwfojim9CD8Wg5M4BQsPSgD1+M3C</span><br><span class="line">mGZlwteDBcWBeR6kGN2e3r2qAs8lbAsOb8e8u8G2kbeq0qMcv3DPupYHdFtO+8e2</span><br><span class="line">bvfYBr8hMto9WC9tFmb8ksGFBWjvH596Fp+PIUAzpQIDAQABMA0GCSqGSIb3DQEB</span><br><span class="line">BAUAA4GBADw/p9qaD0CZFVympSci+laAkM1AeoQqJGToq8+uJWlm7PKV5RggaYBz</span><br><span class="line">QHDecT1ePLJYXbhwe+rINyCJIuAXSz2yX3hEpHEO+MQyqU8FaYaqCRt9t0epx6hq</span><br><span class="line">JBig1iVwSAnn+GbM9ittCgETxvXHiOJ/qpEmDCI2bP/pQ4N10gJV</span><br><span class="line">-----END CERTIFICATE-----</span><br></pre></td></tr></table></figure></p>
+<h4 id="将server-key由PKCS-1编码改成PKCS-8无加密编码"><a href="#将server-key由PKCS-1编码改成PKCS-8无加密编码" class="headerlink" title="将server.key由PKCS#1编码改成PKCS#8无加密编码"></a>将server.key由PKCS#1编码改成PKCS#8无加密编码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv server.key server1.key</span><br><span class="line">openssl pkcs8 -topk8 -inform PEM -outform PEM -in server1.key -out server.key -nocrypt</span><br></pre></td></tr></table></figure>
+<p>cat server.key，能发现不同编码之间的不同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN PRIVATE KEY-----</span><br><span class="line">MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAM2MciTJKUdUnkms</span><br><span class="line">wRwQ1C1qWqi5+OQX/yvJgOwDB+iOKb0IPxaDkzgFCw9KAPX4zcKYZmXC14MFxYF5</span><br><span class="line">HqQY3Z7evaoCzyVsCw5vx7y7wbaRt6rSoxy/cM+6lgd0W077x7Zu99gGvyEy2j1Y</span><br><span class="line">L20WZvySwYUFaO8fn3oWn48hQDOlAgMBAAECgYEAhd9/SC4sUGTwYxO9AkaDqsCm</span><br><span class="line">I1ZcoFJww1gOO6kNsY1F6fRBAqzXaZj/Rwnv7kQJ3z/bEVQBgTh1FoqIRmBblj6a</span><br><span class="line">+sEt/sU4ParhFwVmRKn2exwIEOOfBk/VvM5GA/BFuxIXboreUdo9Y55TBltyUlZs</span><br><span class="line">ko7vyYZ2sGsulZPAfdECQQDrgPQRTciM+63FvapUm+RI+TYmt+qzM44PMz1mSJJh</span><br><span class="line">2mqiRvSIUyFfMfGxkAICp4ar1ByS02drVpuAXAIIKmJ7AkEA33AW9YHXxzIZIWwb</span><br><span class="line">0O/hA0X4YxC18rbT2VOyEI0fKdvDXjmOrKt/SJ1L/Qsz0BE7jaRmVuKhyslFo0vr</span><br><span class="line">UVR4XwJATOvbzGMZpGL4SWQ/5E7e667qrw7XjBzEw9Y6sdP2bBvJRKPkbzqn5c4M</span><br><span class="line">YbDl1zQc2rb3dkWyu+6X7/8dcslVTQJAW86CoH2pW3+KM+FnzIHDwsSNOqczG3dj</span><br><span class="line">tHhfQc26cEiMDbs4lFojAoMfJenkcCmkfp5+LlUQhXIN2vrmxZQfoQJBAKKLHlw/</span><br><span class="line">6ZFAov1wlxiSyP1YveX3PXhNgEbOK9CP5o+poZb01qCv9IVG1hWQCWPMuTcgoRH7</span><br><span class="line">+2XiHgcWQ12kRf4=</span><br><span class="line">-----END PRIVATE KEY-----</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置Nginx支持https"><a href="#配置Nginx支持https" class="headerlink" title="配置Nginx支持https"></a>配置Nginx支持https</h3><p>安装nginx</p>
+<p>Mac上安装完，相关的配置路径如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/etc/nginx/nginx.conf （配置文件路径）</span><br><span class="line">/usr/local/var/www （服务器默认路径）</span><br><span class="line">/usr/local/Cellar/nginx/1.15.10 （貌似是安装路径）</span><br></pre></td></tr></table></figure></p>
+<p>出于方便，直接开启nginx.conf下HTTPS server配置，配置证书路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># HTTPS server</span><br><span class="line">#</span><br><span class="line">server &#123;</span><br><span class="line">    listen       443 ssl http2 default_server;</span><br><span class="line">    server_name  localhost;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      /pathto/server.crt;</span><br><span class="line">    ssl_certificate_key  /pathto/server.key;</span><br><span class="line"></span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   html;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>配置过程中试了好几次，一直出现refuse connection错误。最后发现是配置文件出错，服务没有起来，使用nginx -t检查配置文件是否正确。附上常用的nginx命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit       优雅停止nginx，有连接时会等连接请求完成再杀死worker进程  </span><br><span class="line">nginx -s reload     优雅重启，并重新载入配置文件nginx.conf</span><br><span class="line">nginx -s reopen     重新打开日志文件，一般用于切割日志</span><br><span class="line">nginx -v            查看版本  </span><br><span class="line">nginx -t            检查nginx的配置文件</span><br><span class="line">nginx -h            查看帮助信息</span><br><span class="line">nginx -V            详细版本信息，包括编译参数 </span><br><span class="line">nginx  -c filename  指定配置文件</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用Wireshark查看TLS层交互"><a href="#使用Wireshark查看TLS层交互" class="headerlink" title="使用Wireshark查看TLS层交互"></a>使用Wireshark查看TLS层交互</h3><p>通过Wireshark协议数据，结合相关SSL介绍文章了解TLS的具体交互</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://blog.csdn.net/yongf_xu/article/details/85006854" target="_blank" rel="noopener">自签名证书生成过程</a></p>
+<p><a href="https://www.phildev.net/ssl/opensslconf.html" target="_blank" rel="noopener">Openssl.conf Walkthru</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/29/Openssl分析环境/" data-id="ck6bv982u000g9x4huk1h2ase" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hexo使用介绍" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/29/Hexo使用介绍/" class="article-date">
+  <time datetime="2019-03-29T06:06:22.221Z" itemprop="datePublished">2019-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/29/Hexo使用介绍/">Hexo使用介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>用于记录开发过程中的整理。原先的一些记录没有保存原始文件，现在不能再生成咯，之后考虑将原始文件使用私人仓库的形式放在Github上面。</p>
+<h3 id="Hexo-Setup"><a href="#Hexo-Setup" class="headerlink" title="Hexo Setup"></a>Hexo Setup</h3><h4 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h4><p>以下是一些常用命令，以备查询及Hexo新同学查看，使用过程遇到的坑也会同步到这里</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init Blog</span><br><span class="line"><span class="built_in">cd</span> Blog</span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 开始本地预览</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">// 常用缩写</span><br><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br><span class="line">// 组合命令</span><br><span class="line">hexo d -g <span class="comment">#生成部署</span></span><br><span class="line">hexo s -g <span class="comment">#生成预览</span></span><br></pre></td></tr></table></figure>
+<h4 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装插件</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置_config.yml deploy(注意替换repo)</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:aderan/aderan.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成并部署</span></span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>如果尚未配置当前电脑的 github ssh key<br>使用以下命令生成证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意替换email</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"youremail@host"</span></span><br></pre></td></tr></table></figure></p>
+<p>复制 ~/.ssh/id_rsa.pub 内容至<a href="https://github.com/settings/keys" target="_blank" rel="noopener">setting/ssh</a></p>
+<h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><h4 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h4 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h4 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h4 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/29/Hexo使用介绍/" data-id="ck6bv982e00029x4ht4u02f21" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-GUI程序开发" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/20/GUI程序开发/" class="article-date">
+  <time datetime="2019-01-20T07:18:11.000Z" itemprop="datePublished">2019-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/20/GUI程序开发/">GUI程序开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h3><p>GUI程序开发，有其特有的开发范式。曾就有点点思考的积累，等到最近，组内发起的客户端开发框架设计，及最近正好做React Native的开发整理。貌似对这个范式的思考又有了更多一点的印象。本文希望能立下个Flag，将GUI程序开发有一个相对完整的整理，同时思考尽可能的最佳实践。<br>这暂时是文字慢慢堆积的一个文字，通过慢慢的补全，慢慢展示自己对GUI程序开发的认知。<br>以下是可能涉及到的一些术语，作为之后的整理过程的依据</p>
+<ul>
+<li>事件驱动</li>
+<li>状态机</li>
+<li>页面及路由</li>
+<li>页面组件及组件间通信</li>
+<li>系统API</li>
+<li>开放库及封装，类似网络，数据库及ORM</li>
+<li>控制变化区域</li>
+<li>无状态组件和有状态组件</li>
+</ul>
+<h3 id="通用思考"><a href="#通用思考" class="headerlink" title="通用思考"></a>通用思考</h3><p>以下是一些基本的原则定义，可能只是当前思考的基础</p>
+<ul>
+<li>权衡原则</li>
+<li>理论实践原则，知识是能迅速学习，但是技术需要实践，时间积累的。</li>
+</ul>
+<h3 id="总纲"><a href="#总纲" class="headerlink" title="总纲"></a>总纲</h3><h3 id="框架模式"><a href="#框架模式" class="headerlink" title="框架模式"></a>框架模式</h3><h4 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h4><h4 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h4><h4 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h4><h4 id="单向事件流"><a href="#单向事件流" class="headerlink" title="单向事件流"></a>单向事件流</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/20/GUI程序开发/" data-id="ck6bv982c00019x4hb25di754" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
     
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hide/">hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/功能介绍/">功能介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hide/" style="font-size: 20px;">hide</a> <a href="/tags/功能介绍/" style="font-size: 10px;">功能介绍</a> <a href="/tags/网络工具/" style="font-size: 10px;">网络工具</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/">如何解决Switch无法登陆官网及下载问题</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/02/WifiManager使用介绍/">WifiManager使用介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/07/Android日志系统/">Android日志系统</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/03/Android面试问题整理/">Android面试问题整理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/03/文章Pending/">文章Pending</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
 </aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/twitter" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-
-    <!-- V2EX -->
-    
-
-    <!-- Segmentfault -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year=""></span>&nbsp;Love Way
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Aderan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
-
-
-
-    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
-
-
-
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Swiftye -->
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
 
-    <!-- Local Search-->
-    
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-<!-- Import prettify js  -->
+
+<script src="/js/script.js"></script>
 
 
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
-
-    copyrightSince = 0000;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
-    }
-
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
-    
+  </div>
+</body>
 </html>
