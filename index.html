@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/07/如何解决Switch无法登陆官网及下载问题/" data-id="ck6bv982k00069x4hwte90sri" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/07/如何解决Switch无法登陆官网及下载问题/" data-id="ckrpxjr8t000fv4278qgdtnr5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
@@ -143,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/02/WifiManager使用介绍/" data-id="ck6bv982g00049x4h95r4ps5j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/02/WifiManager使用介绍/" data-id="ckrpxjr8g0008v4279hr4dwp8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/功能介绍/">功能介绍</a></li></ul>
@@ -183,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/07/Android日志系统/" data-id="ck6bv982700009x4hhubkvqb8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/07/Android日志系统/" data-id="ckrpxjr800000v427q38e9hrh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/Android面试问题整理/" data-id="ck6bv982t000f9x4h6sekhz66" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/03/Android面试问题整理/" data-id="ckrpxjr850002v427o19jv6m3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -316,109 +316,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/文章Pending/" data-id="ck6bv982l00079x4hhmvu8t8d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/03/文章Pending/" data-id="ckrpxjr8v000gv42789u4c3ds" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-智能家居协议及实践构想" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/30/智能家居协议及实践构想/" class="article-date">
-  <time datetime="2019-03-30T07:59:00.000Z" itemprop="datePublished">2019-03-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/30/智能家居协议及实践构想/">智能家居协议及实践构想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><ul>
-<li>Infrared（红外协议）</li>
-<li>WiFi （局域网，UPnP等）</li>
-<li>Bluetooth（蓝牙）</li>
-<li>Zigbee</li>
-</ul>
-<h3 id="UPnP及相关自定义协议"><a href="#UPnP及相关自定义协议" class="headerlink" title="UPnP及相关自定义协议"></a>UPnP及相关自定义协议</h3><ul>
-<li>寻址：<br>  定义一个设备由唯一地址。</li>
-<li>发现：<br>  CP或Device加入时候相互通知</li>
-<li>描述：<br>  CP需要获取Device的详细描述及能力集合</li>
-<li>控制：<br>  CP通过通用能力控制设备的状态，同时设备返回相关控制结果，跨设备，所以是一种RPC方式</li>
-<li>事件：<br>  设备再状态变更时候广播通知所有CP</li>
-<li>展示：<br>  设备需要提供设备显示能力，如支持Browser浏览设备状态</li>
-</ul>
-<h3 id="适配实践构想"><a href="#适配实践构想" class="headerlink" title="适配实践构想"></a>适配实践构想</h3><p>如何构建一个智能家居平台，服务于不同的制造商，能让制造商更方便的接入智能家居平台。</p>
-<ol>
-<li>对于软件开发者来说，协议可能有变化，有的遵循Upnp，有的支持rokid的Home，或许又有小米设定一套自己的标准协议，再协议不通用的情况下，如何设置这个一个系统？</li>
-<li>需要考虑不同属性设备具有不同的能力集合，如灯有开，关，设置颜色，设置亮度；冰箱能调整冷藏箱、冷冻箱温度。电视能开关，能接受遥控器等价按钮操作等等。适配需求，不同的device及能力的适配?</li>
-<li>需要考虑如何让不同设备商能定义扩展协议，如海尔的冰箱如果有特殊能力集合，如何再协议端支持扩展，同时如何再CP端支持界面控制扩展。</li>
-</ol>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://spirespark.com/dlna/guidelines/" target="_blank" rel="noopener">DLNA Guidelines</a></p>
-<p><a href="http://upnp.org/specs/arch/UPnP-arch-DeviceArchitecture-v2.0.pdf" target="_blank" rel="noopener">UPnP Device Architecture 2.0</a></p>
-<p><a href="https://rokid.github.io/docs/rokid-homebase-docs/" target="_blank" rel="noopener">rokid-homebase-docs</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/30/智能家居协议及实践构想/" data-id="ck6bv982m00089x4hshv0fo4o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hide/">hide</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-OAuth2介绍" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/30/OAuth2介绍/" class="article-date">
-  <time datetime="2019-03-30T07:37:25.000Z" itemprop="datePublished">2019-03-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/30/OAuth2介绍/">OAuth2.0介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><h4 id="认证模式"><a href="#认证模式" class="headerlink" title="认证模式"></a>认证模式</h4><h4 id="安全说明"><a href="#安全说明" class="headerlink" title="安全说明"></a>安全说明</h4><h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank" rel="noopener">理解OAuth 2.0_阮一峰</a><br><a href="https://www.chrisyue.com/security-issue-about-oauth-2-0-you-should-know.html" target="_blank" rel="noopener">关于 OAuth 2.0安全性你应该要知道的一些事</a><br><a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="noopener">The OAuth 2.0 Authorization Framework</a><br><a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419317851&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">移动应用微信登录开发指南</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/30/OAuth2介绍/" data-id="ck6bv982f00039x4hayl9aiji" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hide/">hide</a></li></ul>
-
     </footer>
   </div>
   
@@ -488,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/29/Openssl分析环境/" data-id="ck6bv982u000g9x4huk1h2ase" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/29/Openssl分析环境/" data-id="ckrpxjr8a0006v427tweet1v5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -539,7 +439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/29/Hexo使用介绍/" data-id="ck6bv982e00029x4ht4u02f21" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/29/Hexo使用介绍/" data-id="ckrpxjr840001v427040gkujf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -591,7 +491,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/20/GUI程序开发/" data-id="ck6bv982c00019x4hb25di754" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/20/GUI程序开发/" data-id="ckrpxjr860003v427gcqabwy2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,7 +514,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hide/">hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/功能介绍/">功能介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/功能介绍/">功能介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
     </div>
   </div>
 
@@ -624,7 +524,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hide/" style="font-size: 20px;">hide</a> <a href="/tags/功能介绍/" style="font-size: 10px;">功能介绍</a> <a href="/tags/网络工具/" style="font-size: 10px;">网络工具</a>
+      <a href="/tags/功能介绍/" style="font-size: 10px;">功能介绍</a> <a href="/tags/网络工具/" style="font-size: 10px;">网络工具</a>
     </div>
   </div>
 
@@ -677,7 +577,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 Aderan<br>
+      &copy; 2021 Aderan<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

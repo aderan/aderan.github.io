@@ -5,19 +5,20 @@
   
 
   
-  <title>文章Pending | Love Way</title>
+  <title>mmap系统调用 | Love Way</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Handler Looper MessageQueue HandlerStep 1 Java层分析Step 2 入口MessageQueue.pollOnce分析 Binder机制关于阅读源码那些事What，Why，How">
+  <meta name="description" content="原理描述应用进程读取文件时候，会先将将文件数据拷贝到内核缓存中， 然后从内核缓存中拷贝数据到应用进程内存，写文件时类似。使用mmap只需磁盘文件到用户内存的一次拷贝 优点 减少拷贝次数，提升读取效率 直接反应修改 提供进程间通信方式 可用于实现高效的大规模数据传输  注意事项按页映射，与文件无关 参考文章mmap和普通文件读写的区别和比较 &amp;amp; mmap的注意点">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文章Pending">
-<meta property="og:url" content="http://yoursite.com/2019/04/03/文章Pending/index.html">
+<meta property="og:title" content="mmap系统调用">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/mmap系统调用/index.html">
 <meta property="og:site_name" content="Love Way">
-<meta property="og:description" content="Handler Looper MessageQueue HandlerStep 1 Java层分析Step 2 入口MessageQueue.pollOnce分析 Binder机制关于阅读源码那些事What，Why，How">
+<meta property="og:description" content="原理描述应用进程读取文件时候，会先将将文件数据拷贝到内核缓存中， 然后从内核缓存中拷贝数据到应用进程内存，写文件时类似。使用mmap只需磁盘文件到用户内存的一次拷贝 优点 减少拷贝次数，提升读取效率 直接反应修改 提供进程间通信方式 可用于实现高效的大规模数据传输  注意事项按页映射，与文件无关 参考文章mmap和普通文件读写的区别和比较 &amp;amp; mmap的注意点">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T03:36:18.295Z">
+<meta property="og:updated_time" content="2020-02-07T13:17:09.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章Pending">
-<meta name="twitter:description" content="Handler Looper MessageQueue HandlerStep 1 Java层分析Step 2 入口MessageQueue.pollOnce分析 Binder机制关于阅读源码那些事What，Why，How">
+<meta name="twitter:title" content="mmap系统调用">
+<meta name="twitter:description" content="原理描述应用进程读取文件时候，会先将将文件数据拷贝到内核缓存中， 然后从内核缓存中拷贝数据到应用进程内存，写文件时类似。使用mmap只需磁盘文件到用户内存的一次拷贝 优点 减少拷贝次数，提升读取效率 直接反应修改 提供进程间通信方式 可用于实现高效的大规模数据传输  注意事项按页映射，与文件无关 参考文章mmap和普通文件读写的区别和比较 &amp;amp; mmap的注意点">
   
     <link rel="alternate" href="/atom.xml" title="Love Way" type="application/atom+xml">
   
@@ -64,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-文章Pending" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-mmap系统调用" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/03/文章Pending/" class="article-date">
-  <time datetime="2019-04-03T04:26:13.000Z" itemprop="datePublished">2019-04-03</time>
+    <a href="/2020/02/07/mmap系统调用/" class="article-date">
+  <time datetime="2020-02-07T13:07:22.000Z" itemprop="datePublished">2020-02-07</time>
 </a>
     
   </div>
@@ -78,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      文章Pending
+      mmap系统调用
     </h1>
   
 
@@ -86,34 +87,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Handler-Looper-MessageQueue-Handler"><a href="#Handler-Looper-MessageQueue-Handler" class="headerlink" title="Handler Looper MessageQueue Handler"></a>Handler Looper MessageQueue Handler</h3><p>Step 1 Java层分析<br>Step 2 入口MessageQueue.pollOnce分析</p>
-<h3 id="Binder机制"><a href="#Binder机制" class="headerlink" title="Binder机制"></a>Binder机制</h3><h3 id="关于阅读源码那些事"><a href="#关于阅读源码那些事" class="headerlink" title="关于阅读源码那些事"></a>关于阅读源码那些事</h3><p>What，Why，How</p>
+        <h2 id="原理描述"><a href="#原理描述" class="headerlink" title="原理描述"></a>原理描述</h2><p>应用进程读取文件时候，会先将将文件数据拷贝到内核缓存中， 然后从内核缓存中拷贝数据到应用进程内存，写文件时类似。<br>使用mmap只需磁盘文件到用户内存的一次拷贝</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>减少拷贝次数，提升读取效率</li>
+<li>直接反应修改</li>
+<li>提供进程间通信方式</li>
+<li>可用于实现高效的大规模数据传输</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>按页映射，与文件无关</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://www.cnblogs.com/charlesblc/p/6263665.html" target="_blank" rel="noopener">mmap和普通文件读写的区别和比较 &amp; mmap的注意点</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/03/文章Pending/" data-id="ckrpxjr8v000gv42789u4c3ds" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/07/mmap系统调用/" data-id="ck6c72xbd0003up4hw7toje5j" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/04/03/Android面试问题整理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Android面试问题整理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/29/Openssl分析环境/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Https介绍--环境搭建</div>
+      <div class="article-nav-title">如何解决Switch无法登陆官网及下载问题</div>
     </a>
   
 </nav>
@@ -132,7 +133,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/功能介绍/">功能介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hide/">hide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/功能介绍/">功能介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络工具/">网络工具</a></li></ul>
     </div>
   </div>
 
@@ -142,7 +143,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/功能介绍/" style="font-size: 10px;">功能介绍</a> <a href="/tags/网络工具/" style="font-size: 10px;">网络工具</a>
+      <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/hide/" style="font-size: 20px;">hide</a> <a href="/tags/功能介绍/" style="font-size: 10px;">功能介绍</a> <a href="/tags/网络工具/" style="font-size: 10px;">网络工具</a>
     </div>
   </div>
 
@@ -164,6 +165,10 @@
       <ul>
         
           <li>
+            <a href="/2020/02/07/mmap系统调用/">mmap系统调用</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/07/如何解决Switch无法登陆官网及下载问题/">如何解决Switch无法登陆官网及下载问题</a>
           </li>
         
@@ -179,10 +184,6 @@
             <a href="/2019/04/03/Android面试问题整理/">Android面试问题整理</a>
           </li>
         
-          <li>
-            <a href="/2019/04/03/文章Pending/">文章Pending</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -195,7 +196,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2021 Aderan<br>
+      &copy; 2020 Aderan<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
